@@ -1,0 +1,7 @@
+streamlit
+torch
+torchvision
+azureml-core
+matplotlib
+numpy
+pandas
