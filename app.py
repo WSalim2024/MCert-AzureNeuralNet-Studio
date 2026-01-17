@@ -4,78 +4,113 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 import matplotlib.pyplot as plt
+import numpy as np
 import os
+import time
 
-# Import our modules
-from model import SimpleNN
+# --- IMPORT OUR MODULES ---
+from model import SimpleNN  # PyTorch
+from model_tf import create_tf_model  # TensorFlow
 from azure_manager import AzureManager
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Azure Neural Net Studio", page_icon="🧠", layout="wide")
 
-# --- SIDEBAR: AZURE CONFIG ---
+# --- CUSTOM TENSORFLOW CALLBACK (For Live UI Updates) ---
+import tensorflow as tf
+
+
+class StreamlitTFCallback(tf.keras.callbacks.Callback):
+    def __init__(self, progress_bar, status_text, chart_placeholder):
+        super().__init__()
+        self.progress_bar = progress_bar
+        self.status_text = status_text
+        self.chart_placeholder = chart_placeholder
+        self.loss_history = []
+
+    def on_epoch_end(self, epoch, logs=None):
+        # 1. Update Stats
+        loss = logs.get('loss')
+        self.loss_history.append(loss)
+
+        # 2. Update Progress Bar
+        # We assume 5 epochs for this demo
+        self.progress_bar.progress((epoch + 1) / 5)
+        self.status_text.metric(f"Epoch {epoch + 1}/5", f"Loss: {loss:.4f}")
+
+        # 3. Update Chart
+        fig, ax = plt.subplots()
+        ax.plot(self.loss_history, marker='o', color='orange', label='TF Training Loss')
+        ax.set_xlabel("Epoch")
+        ax.set_ylabel("Loss")
+        ax.legend()
+        self.chart_placeholder.pyplot(fig)
+
+        # Small delay to make it visible
+        time.sleep(0.5)
+
+
+# --- SIDEBAR ---
 st.sidebar.title("☁️ Azure Configuration")
 st.sidebar.markdown("Connect to your Azure ML Workspace")
-
 sub_id = st.sidebar.text_input("Subscription ID", type="password")
 res_grp = st.sidebar.text_input("Resource Group")
 ws_name = st.sidebar.text_input("Workspace Name")
 
-azure_status = st.sidebar.empty()
 azure_mgr = None
-
 if st.sidebar.button("🔌 Connect to Azure"):
     if sub_id and res_grp and ws_name:
         azure_mgr = AzureManager(sub_id, res_grp, ws_name)
         success, msg = azure_mgr.connect()
         if success:
-            azure_status.success(msg)
-            st.session_state['azure_connected'] = True
+            st.sidebar.success(msg)
             st.session_state['azure_mgr'] = azure_mgr
         else:
-            azure_status.error(msg)
-    else:
-        azure_status.warning("Please fill all Azure fields.")
+            st.sidebar.error(msg)
 
 # --- MAIN LAYOUT ---
-st.title("🧠 Azure Neural Net Studio")
+st.title("🧠 Azure Neural Net Studio: Dual-Engine Edition")
 st.markdown("""
-Implement, Train, and Deploy neural networks using **PyTorch** and **Azure Machine Learning**.
+Professional Workbench for **PyTorch** and **TensorFlow** experimentation and **Azure** deployment.
 """)
 
-tabs = st.tabs(["📊 Data Inspector", "⚙️ Model Architecture", "🔥 Training Lab", "🚀 Azure Deployment"])
+# NEW TAB ADDED: "🆚 Framework Showdown"
+tabs = st.tabs(["📊 Data Inspector", "⚙️ Architecture", "🔥 PyTorch Lab", "🟠 TensorFlow Lab", "🚀 Azure Deploy"])
 
-# --- TAB 1: DATA INSPECTOR ---
+# =========================================
+# TAB 1: DATA INSPECTOR
+# =========================================
 with tabs[0]:
     st.header("MNIST Dataset Preview")
-    st.markdown("The dataset consists of 28x28 grayscale images of handwritten digits.")
-
-    if st.button("📥 Load Random Sample Batch"):
+    if st.button("📥 Load Sample Batch"):
         transform = transforms.ToTensor()
-        mnist_data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)  # Load MNIST
+        mnist_data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
         loader = torch.utils.data.DataLoader(mnist_data, batch_size=10, shuffle=True)
-        dataiter = iter(loader)
-        images, labels = next(dataiter)
+        images, labels = next(iter(loader))
 
         fig, axes = plt.subplots(1, 10, figsize=(15, 2))
         for i in range(10):
             axes[i].imshow(images[i].squeeze(), cmap='gray')
             axes[i].axis('off')
-            axes[i].set_title(f"Label: {labels[i].item()}")
+            axes[i].set_title(f"{labels[i].item()}")
         st.pyplot(fig)
 
-# --- TAB 2: ARCHITECTURE ---
+# =========================================
+# TAB 2: ARCHITECTURE COMPARISON
+# =========================================
 with tabs[1]:
-    st.header("Feedforward Network Structure")
-    st.markdown("We define a simple network with **One Hidden Layer** and **ReLU Activation**.")
+    st.header("Code Comparison: PyTorch vs TensorFlow")
+    st.markdown("See how the **same** neural network is defined in both frameworks.")
 
     col1, col2 = st.columns(2)
+
     with col1:
+        st.subheader("🔥 PyTorch (Object-Oriented)")
         st.code("""
 class SimpleNN(nn.Module):
     def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(784, 128) 
+        super().__init__()
+        self.fc1 = nn.Linear(784, 128)
         self.fc2 = nn.Linear(128, 10)
 
     def forward(self, x):
@@ -83,95 +118,126 @@ class SimpleNN(nn.Module):
         x = F.relu(self.fc1(x))
         return self.fc2(x)
         """, language="python")
+        st.info("Explicit control flow. You define the layers and the path.")
 
     with col2:
-        st.info(
-            "Input Layer: 784 Neurons (Pixels)\n\n⬇️\n\nHidden Layer: 128 Neurons (ReLU)\n\n⬇️\n\nOutput Layer: 10 Neurons (Classes)")
+        st.subheader("🟠 TensorFlow (Declarative)")
+        st.code("""
+model = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(input_shape=(28, 28)),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10)
+])
+        """, language="python")
+        st.info("Configuration style. You stack layers like lego blocks.")
 
-# --- TAB 3: TRAINING LAB ---
+# =========================================
+# TAB 3: PYTORCH LAB
+# =========================================
 with tabs[2]:
-    st.header("Model Training")
+    st.header("🔥 PyTorch Training Loop")
+    st.markdown("Manually controlling the training steps.")
 
-    # Hyperparameters
-    col1, col2, col3 = st.columns(3)
-    epochs = col1.slider("Epochs", 1, 10, 5)  # Training epochs
-    lr = col2.number_input("Learning Rate", value=0.01, format="%.4f")
-    batch_size = col3.selectbox("Batch Size", [32, 64, 128], index=1)
-
-    start_train = st.button("▶️ Start Training")
-
-    if start_train:
-        # Prepare Data
+    if st.button("▶️ Start PyTorch Training"):
+        # Setup
         transform = transforms.ToTensor()
         train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-        train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+        train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
 
-        # Init Model
         model = SimpleNN()
-        criterion = nn.CrossEntropyLoss()  # Loss function
-        optimizer = optim.SGD(model.parameters(), lr=lr)  # Optimizer
+        optimizer = optim.SGD(model.parameters(), lr=0.01)
+        criterion = nn.CrossEntropyLoss()
 
-        # UI Elements for progress
+        # UI Elements
         progress_bar = st.progress(0)
-        status_text = st.empty()
-        chart_placeholder = st.empty()
-        loss_history = []
+        status = st.empty()
+        chart = st.empty()
+        loss_hist = []
 
-        st.spinner("Training in progress...")
-
-        for epoch in range(epochs):
+        for epoch in range(5):
             running_loss = 0.0
-            for i, (images, labels) in enumerate(train_loader):
-                # Forward pass
+            for images, labels in train_loader:
+                optimizer.zero_grad()
                 outputs = model(images)
                 loss = criterion(outputs, labels)
-
-                # Backward pass
-                optimizer.zero_grad()
-                loss.backward()  # Backpropagation
+                loss.backward()
                 optimizer.step()
-
                 running_loss += loss.item()
 
-            # Update Stats
             avg_loss = running_loss / len(train_loader)
-            loss_history.append(avg_loss)
+            loss_hist.append(avg_loss)
 
             # Update UI
-            progress_bar.progress((epoch + 1) / epochs)
-            status_text.metric(f"Epoch {epoch + 1}/{epochs}", f"Loss: {avg_loss:.4f}")
+            progress_bar.progress((epoch + 1) / 5)
+            status.metric(f"Epoch {epoch + 1}/5", f"Loss: {avg_loss:.4f}")
 
-            # Live Chart
             fig, ax = plt.subplots()
-            ax.plot(loss_history, marker='o', color='teal', label='Training Loss')
-            ax.set_xlabel("Epoch")
-            ax.set_ylabel("Loss")
-            ax.legend()
-            chart_placeholder.pyplot(fig)
+            ax.plot(loss_hist, marker='o', color='teal')
+            chart.pyplot(fig)
 
-        st.success("✅ Training Complete!")
+        torch.save(model.state_dict(), "models/simple_nn.pth")
+        st.success("✅ PyTorch Model Saved!")
 
-        # Save Model locally
-        os.makedirs("models", exist_ok=True)
-        torch.save(model.state_dict(), "models/simple_nn.pth")  # Save model
-        st.session_state['model_trained'] = True
-
-# --- TAB 4: AZURE DEPLOYMENT ---
+# =========================================
+# TAB 4: TENSORFLOW LAB (NEW!)
+# =========================================
 with tabs[3]:
-    st.header("Deploy to Azure Cloud")
+    st.header("🟠 TensorFlow Training Loop")
+    st.markdown("Using `model.fit()` with a custom **Streamlit Callback**.")
 
-    if 'model_trained' not in st.session_state:
-        st.warning("⚠️ Please train a model in the 'Training Lab' tab first.")
-    else:
-        st.success("✅ Model file `simple_nn.pth` is ready for upload.")
+    if st.button("▶️ Start TensorFlow Training"):
+        with st.spinner("Preparing TensorFlow Data..."):
+            # Prepare Data (TF style)
+            mnist = tf.keras.datasets.mnist
+            (x_train, y_train), (x_test, y_test) = mnist.load_data()
+            x_train = x_train / 255.0  # Normalize
 
-        model_name = st.text_input("Model Registry Name", "mnist-simple-nn")
+            # Create Model
+            tf_model = create_tf_model()
+            loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+            tf_model.compile(optimizer='sgd', loss=loss_fn, metrics=['accuracy'])
 
-        if st.button("☁️ Register Model to Azure"):
-            if 'azure_mgr' in st.session_state:
-                with st.spinner("Uploading to Azure ML Workspace..."):
-                    mgr = st.session_state['azure_mgr']
-                    result = mgr.register_model("models/simple_nn.pth", model_name)  # Register step
-                    st.info(result)
+            # UI Elements
+            tf_progress = st.progress(0)
+            tf_status = st.empty()
+            tf_chart = st.empty()
+
+            # Connect Custom Callback
+            streamlit_cb = StreamlitTFCallback(tf_progress, tf_status, tf_chart)
+
+            # TRAIN
+            tf_model.fit(x_train, y_train, epochs=5, callbacks=[streamlit_cb], verbose=0)
+
+            # Save
+            if not os.path.exists('models'): os.makedirs('models')
+            tf_model.save('models/tf_model.h5')
+            st.success("✅ TensorFlow Model Saved!")
+
+# =========================================
+# TAB 5: AZURE DEPLOY
+# =========================================
+with tabs[4]:
+    st.header("🚀 Deploy to Azure")
+    st.markdown("Upload your trained models to the cloud.")
+
+    model_choice = st.radio("Select Model to Upload:", ["PyTorch (.pth)", "TensorFlow (.h5)"])
+
+    if st.button("☁️ Register Model"):
+        if 'azure_mgr' not in st.session_state:
+            st.error("Please connect to Azure in the sidebar first!")
+        else:
+            mgr = st.session_state['azure_mgr']
+
+            if model_choice == "PyTorch (.pth)":
+                path = "models/simple_nn.pth"
+                name = "mnist-pytorch"
             else:
-                st.error("❌ Please connect to Azure in the Sidebar first.")
+                path = "models/tf_model.h5"
+                name = "mnist-tensorflow"
+
+            if os.path.exists(path):
+                with st.spinner(f"Uploading {name}..."):
+                    res = mgr.register_model(path, name)
+                    st.success(res)
+            else:
+                st.error(f"File {path} not found. Please train the model first.")

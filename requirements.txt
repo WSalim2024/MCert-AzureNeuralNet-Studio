@@ -5,3 +5,4 @@ azureml-core
 matplotlib
 numpy
 pandas
+tensorflow

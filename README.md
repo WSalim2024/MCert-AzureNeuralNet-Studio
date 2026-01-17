@@ -1,15 +1,16 @@
 <div align="center">
 
-# 🧠☁️ Azure Neural Net Studio
+# 🧠☁️ Azure Neural Net Studio: Dual-Engine Edition
 
-### **Zero to Cloud Deep Learning Workbench**
+### **The Ultimate Framework Showdown**
 
-*Design, Train, and Deploy Neural Networks from Local to Azure — All in One Dashboard*
+*Design, Train, and Deploy Neural Networks with PyTorch AND TensorFlow — Side by Side*
 
 ---
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure_ML-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
@@ -26,8 +27,9 @@
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
-║   "From handwritten digits to cloud deployment in 4 clicks.                   ║
-║    This is what modern MLOps looks like."                                     ║
+║   "Two frameworks. One dashboard. Zero excuses."                              ║
+║                                                                               ║
+║   PyTorch vs TensorFlow — the debate ends here. Now you can run both.        ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -60,43 +62,58 @@
 
 ## 🚀 Overview
 
-**Azure Neural Net Studio** is a professional-grade **"Zero to Cloud"** Deep Learning workbench. It enables users to visualize MNIST data, design a Feedforward Neural Network in PyTorch, train it in real-time with live loss curves, and deploy the trained model to the Azure Machine Learning cloud registry—all from a single dashboard.
+**Azure Neural Net Studio: Dual-Engine Edition** is a professional **"Zero to Cloud"** workbench that unifies the two giants of Deep Learning. It enables users to design, train, and deploy Neural Networks using **both PyTorch and TensorFlow** from a single, interactive dashboard.
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         ZERO TO CLOUD WORKFLOW                                  │
+│                      THE DUAL-ENGINE ARCHITECTURE                               │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐      │
-│   │  📊     │    │  ⚙️     │    │  🔥     │    │  💾     │    │  ☁️     │      │
-│   │  DATA   │───►│ DESIGN  │───►│ TRAIN   │───►│  SAVE   │───►│ DEPLOY  │      │
-│   │         │    │         │    │         │    │         │    │         │      │
-│   │  MNIST  │    │ PyTorch │    │  Live   │    │  .pth   │    │  Azure  │      │
-│   │ Dataset │    │  Model  │    │  Loss   │    │  File   │    │   ML    │      │
-│   └─────────┘    └─────────┘    └─────────┘    └─────────┘    └─────────┘      │
+│                            📊 MNIST DATA                                        │
+│                                  │                                              │
+│                    ┌─────────────┴─────────────┐                                │
+│                    │                           │                                │
+│                    ▼                           ▼                                │
+│        ┌─────────────────────┐     ┌─────────────────────┐                      │
+│        │  🔥 PYTORCH         │     │  🟠 TENSORFLOW      │                      │
+│        │                     │     │                     │                      │
+│        │  Object-Oriented    │     │  Declarative        │                      │
+│        │  nn.Module Class    │     │  keras.Sequential   │                      │
+│        │                     │     │                     │                      │
+│        │  Manual Loop:       │     │  Keras API:         │                      │
+│        │  optimizer.step()   │     │  model.fit()        │                      │
+│        │                     │     │                     │                      │
+│        │  Output: .pth       │     │  Output: .h5        │                      │
+│        └──────────┬──────────┘     └──────────┬──────────┘                      │
+│                   │                           │                                 │
+│                   └─────────────┬─────────────┘                                 │
+│                                 │                                               │
+│                                 ▼                                               │
+│                    ┌─────────────────────────┐                                  │
+│                    │  ☁️ AZURE ML REGISTRY   │                                  │
+│                    │                         │                                  │
+│                    │  Register either:       │                                  │
+│                    │  • simple_nn.pth        │                                  │
+│                    │  • simple_nn.h5         │                                  │
+│                    └─────────────────────────┘                                  │
 │                                                                                 │
-│        Tab 1          Tab 2          Tab 3                       Tab 4          │
-│     Data Inspector   Architecture   Training Lab            Azure Deployment    │
-│                                                                                 │
-│   ═══════════════════════════════════════════════════════════════════════════   │
-│                                                                                 │
-│                    ALL FROM A SINGLE STREAMLIT DASHBOARD                        │
+│                    ONE DASHBOARD. TWO FRAMEWORKS. CLOUD READY.                  │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
 
-### The Complete Journey
+### Why Dual-Engine?
 
-| Stage | Location | Tool | Output |
-|:------|:---------|:-----|:-------|
-| **1. Explore** | Local | Torchvision | Data understanding |
-| **2. Design** | Local | PyTorch | Model architecture |
-| **3. Train** | Local CPU | SGD + CrossEntropy | Trained weights |
-| **4. Deploy** | Cloud | Azure ML SDK | Registered model |
+| Question | Answer |
+|:---------|:-------|
+| "Which framework should I learn?" | **Both** — see them side by side |
+| "Which is faster?" | Train both and compare live |
+| "Which deploys easier?" | Same Azure workflow for both |
+| "Which code is cleaner?" | View the Code Diff tab |
 
 ---
 
@@ -106,103 +123,88 @@
 <tr>
 <td width="50%">
 
-### 📊 Data Inspector
+### 🆚 Framework Showdown
 
-Interactive preview of the **MNIST dataset** (handwritten digits).
+Side-by-side **code comparison** of PyTorch (Object-Oriented) vs. TensorFlow (Declarative).
 
 ```
-┌───────────────────────────────┐
-│  MNIST Sample Viewer          │
-│                               │
-│    ┌─────┐  ┌─────┐  ┌─────┐  │
-│    │  5  │  │  0  │  │  4  │  │
-│    │ ██  │  │ ░░  │  │ ▓▓  │  │
-│    │ ██  │  │░  ░ │  │▓  ▓ │  │
-│    │ ██  │  │ ░░  │  │ ▓▓▓ │  │
-│    └─────┘  └─────┘  └─────┘  │
-│                               │
-│  Label: 5    Label: 0   ...   │
-└───────────────────────────────┘
+┌─────────────────┬─────────────────┐
+│    PyTorch      │   TensorFlow    │
+├─────────────────┼─────────────────┤
+│ class SimpleNN  │ tf.keras.       │
+│   (nn.Module):  │   Sequential([  │
+│                 │                 │
+│   def __init__ │     Dense(128), │
+│   def forward  │     Dense(10)   │
+│                 │   ])            │
+└─────────────────┴─────────────────┘
 ```
 
-*View random samples from the 60,000 training images*
+*See exactly how the same network looks in different paradigms*
 
 </td>
 <td width="50%">
 
-### ⚙️ Transparent Architecture
+### 🔥 Dual Training Labs
 
-Visualizes the **PyTorch model structure** with full code transparency.
+Real-time training visualization for **both engines**:
 
 ```
-INPUT (784)
-    │
-    ▼
-┌─────────────────┐
-│  Linear(784→128)│
-│  + ReLU         │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Linear(128→10) │
-└────────┬────────┘
-         │
-         ▼
-OUTPUT (10 classes)
+PyTorch Loss (Teal)     TensorFlow Loss (Orange)
+   │\                      │\
+   │ \                     │ \
+   │  \                    │  \
+   │   \_____              │   \_____
+   └──────────             └──────────
+     Epochs                  Epochs
 ```
 
-*See exactly what's inside the neural network*
+*PyTorch: Manual Loop | TensorFlow: Custom Callbacks*
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 🔥 Live Training Lab
+### 📊 Data Inspector
 
-Real-time training loop visualization with **dynamic loss charts** and progress bars.
+Interactive preview of the **MNIST dataset** — shared by both frameworks.
 
 ```
-Training Progress: ████████░░ 80%
-
-Epoch 4/5
-  Loss: 0.2341 ↓
-  Accuracy: 93.2%
-
-    Loss
-    │\
-    │ \
-    │  \_____
-    └────────────
-      Epoch
+┌─────────────────────────────────┐
+│  Shared Data Source             │
+│                                 │
+│    ┌───┐  ┌───┐  ┌───┐         │
+│    │ 5 │  │ 0 │  │ 4 │         │
+│    └───┘  └───┘  └───┘         │
+│                                 │
+│  Same preprocessing for both    │
+│  → Fair comparison guaranteed   │
+└─────────────────────────────────┘
 ```
-
-*Watch your model learn in real-time*
 
 </td>
 <td width="50%">
 
 ### ☁️ Azure Integration
 
-**One-click connection** to Azure ML Workspace and model registration.
+**One-click connection** to Azure ML Workspace to register models from **either framework**.
 
 ```
-┌───────────────────────────────┐
-│  ☁️ Azure Deployment          │
-│                               │
-│  Workspace: my-ml-workspace   │
-│  Model Name: mnist_classifier │
-│                               │
-│  Status: ✅ Connected         │
-│                               │
-│  [  Register Model to Azure  ]│
-│                               │
-│  ✓ Model uploaded to cloud!   │
-└───────────────────────────────┘
+┌─────────────────────────────────┐
+│  Azure Deployment Center        │
+│                                 │
+│  Select Model:                  │
+│  ○ PyTorch (.pth)               │
+│  ○ TensorFlow (.h5)             │
+│                                 │
+│  [ Register to Azure ]          │
+│                                 │
+│  ✅ Model uploaded!             │
+└─────────────────────────────────┘
 ```
 
-*Push your trained model to production-ready cloud storage*
+*Same cloud workflow regardless of framework*
 
 </td>
 </tr>
@@ -212,99 +214,92 @@ Epoch 4/5
 
 ## 🎓 What This Project Is About
 
-This project serves as a **bridge between local experimentation and cloud deployment**, demonstrating modern **MLOps practices** in a user-friendly interface.
+This project is a **masterclass in MLOps and Framework Interoperability**. It demonstrates how to build production-grade deep learning workflows regardless of the underlying library.
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         BRIDGING LOCAL & CLOUD                                  │
+│                       FRAMEWORK INTEROPERABILITY                                │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   TRADITIONAL WORKFLOW                       THIS STUDIO                        │
-│   ────────────────────                       ───────────                        │
+│   THE OLD WAY                              THE DUAL-ENGINE WAY                  │
+│   ───────────                              ───────────────────                  │
 │                                                                                 │
-│   📓 Jupyter Notebook                        🖥️ Unified Dashboard               │
-│      ↓                                                                          │
-│   💻 Command Line Training                   📊 Visual Data Explorer            │
-│      ↓                                       ⚙️ Architecture Viewer             │
-│   📁 Manual File Management                  🔥 Live Training Monitor           │
-│      ↓                                       ☁️ One-Click Deployment            │
-│   🔧 Separate Azure CLI                                                         │
-│      ↓                                                                          │
-│   😵 Context Switching                       😊 All in One Place                │
+│   Pick PyTorch OR TensorFlow               Use BOTH in parallel                 │
+│        │                                            │                           │
+│        ▼                                            ▼                           │
+│   Learn one paradigm only                  Compare paradigms live               │
+│        │                                            │                           │
+│        ▼                                            ▼                           │
+│   Separate deployment scripts              Unified Azure workflow               │
+│        │                                            │                           │
+│        ▼                                            ▼                           │
+│   Framework lock-in                        Framework agnostic                   │
 │                                                                                 │
-│   ─────────────────────────────────────────────────────────────────────────     │
-│                                                                                 │
-│                    MODERN MLOps IN A SINGLE INTERFACE                           │
+│   😵 "Which do I choose?"                 😊 "I understand both!"               │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
 
-### Who Is This For?
+### Learning Outcomes
 
-| User Type | What They'll Learn |
-|:----------|:-------------------|
-| **Students** | PyTorch fundamentals + Cloud deployment |
-| **Data Scientists** | Streamlined experiment-to-production workflow |
-| **ML Engineers** | Azure ML SDK integration patterns |
-| **Educators** | Interactive MLOps demonstration tool |
+| Skill | What You'll Learn |
+|:------|:------------------|
+| **PyTorch Fundamentals** | Custom training loops, `nn.Module`, `autograd` |
+| **TensorFlow/Keras** | `model.fit()`, custom callbacks, `Sequential` API |
+| **MLOps** | Model versioning, cloud deployment, artifact management |
+| **Comparative Analysis** | Same task, different approaches, same result |
 
 ---
 
 ## ⚡ What It Does
 
-The Azure Neural Net Studio performs five core operations:
+The Dual-Engine Edition performs four core operations:
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           CORE OPERATIONS                                       │
+│                           CORE CAPABILITIES                                     │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  1️⃣ LOAD & PROCESS                                                      │   │
+│   │  1️⃣ IMPLEMENT IDENTICAL NETWORKS                                        │   │
 │   │                                                                         │   │
-│   │  • Downloads MNIST dataset via torchvision                              │   │
-│   │  • Normalizes pixel values (0-255 → 0-1)                                │   │
-│   │  • Creates DataLoader for batch processing                              │   │
+│   │  The EXACT SAME Feedforward Neural Network in both frameworks:          │   │
+│   │                                                                         │   │
+│   │  PyTorch:               TensorFlow:                                     │   │
+│   │  class SimpleNN         tf.keras.Sequential([                           │   │
+│   │    fc1: 784 → 128         Dense(128, 'relu'),                           │   │
+│   │    fc2: 128 → 10          Dense(10)                                     │   │
+│   │                         ])                                              │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
-│                                      │                                          │
-│                                      ▼                                          │
+│                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  2️⃣ DEFINE ARCHITECTURE                                                 │   │
+│   │  2️⃣ TRAIN LIVE IN BROWSER                                               │   │
 │   │                                                                         │   │
-│   │  • Creates SimpleNN class (PyTorch nn.Module)                           │   │
-│   │  • 784 input → 128 hidden (ReLU) → 10 output                            │   │
+│   │  Both models train inside Streamlit with real-time loss visualization   │   │
+│   │                                                                         │   │
+│   │  PyTorch: Teal curve 🟢                                                 │   │
+│   │  TensorFlow: Orange curve 🟠                                            │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
-│                                      │                                          │
-│                                      ▼                                          │
+│                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  3️⃣ TRAIN LOCALLY                                                       │   │
+│   │  3️⃣ VISUALIZE ARCHITECTURAL DIFFERENCES                                 │   │
 │   │                                                                         │   │
-│   │  • Runs training loop on local CPU                                      │   │
-│   │  • Uses SGD optimizer + CrossEntropyLoss                                │   │
-│   │  • Updates UI at every epoch with loss metrics                          │   │
+│   │  Imperative (PyTorch)          vs          Symbolic (TensorFlow)        │   │
+│   │  "Define-by-Run"                           "Define-then-Run"            │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
-│                                      │                                          │
-│                                      ▼                                          │
+│                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  4️⃣ CONNECT TO AZURE                                                    │   │
+│   │  4️⃣ DEPLOY TO AZURE CLOUD                                               │   │
 │   │                                                                         │   │
-│   │  • Authenticates via Interactive Login or Service Principal             │   │
-│   │  • Connects to Azure ML Workspace                                       │   │
-│   └─────────────────────────────────────────────────────────────────────────┘   │
-│                                      │                                          │
-│                                      ▼                                          │
-│   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  5️⃣ REGISTER MODEL                                                      │   │
-│   │                                                                         │   │
-│   │  • Uploads trained .pth file to Azure Blob Storage                      │   │
-│   │  • Registers model in Azure ML Model Registry                           │   │
-│   │  • Returns model URI for deployment                                     │   │
+│   │  Upload trained artifacts to Azure ML Registry:                         │   │
+│   │  • PyTorch: models/simple_nn.pth                                        │   │
+│   │  • TensorFlow: models/simple_nn.h5                                      │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
@@ -316,162 +311,171 @@ The Azure Neural Net Studio performs five core operations:
 
 ## 🧮 What Is The Logic
 
-### Neural Network Model
+Each framework uses a fundamentally different training paradigm:
 
-A standard **Feedforward Network** (Multilayer Perceptron) for image classification.
+### 🔥 PyTorch Engine — Imperative / Object-Oriented
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         SIMPLE NEURAL NETWORK                                   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│   28×28 Image                                                                   │
-│   ┌─────────────┐                                                               │
-│   │░░░██░░░░░░░░│                                                               │
-│   │░░░██░░░░░░░░│     Flatten                                                   │
-│   │░░░██░░░░░░░░│   ──────────►   [x₁, x₂, x₃, ... x₇₈₄]                       │
-│   │░░░██████░░░░│                  (784 pixel values)                           │
-│   │░░░░░░░██░░░░│                                                               │
-│   │░░░░░░░██░░░░│                                                               │
-│   │░░░██████░░░░│                                                               │
-│   └─────────────┘                                                               │
-│         │                                                                       │
-│         ▼                                                                       │
-│   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │                     LAYER 1: Linear(784 → 128) + ReLU                   │   │
-│   │                                                                         │   │
-│   │   h = ReLU(W₁ × x + b₁)                                                 │   │
-│   │                                                                         │   │
-│   │   • 784 × 128 = 100,352 weights                                         │   │
-│   │   • 128 biases                                                          │   │
-│   │   • ReLU activation: max(0, z)                                          │   │
-│   └─────────────────────────────────────────────────────────────────────────┘   │
-│         │                                                                       │
-│         ▼                                                                       │
-│   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │                     LAYER 2: Linear(128 → 10)                           │   │
-│   │                                                                         │   │
-│   │   output = W₂ × h + b₂                                                  │   │
-│   │                                                                         │   │
-│   │   • 128 × 10 = 1,280 weights                                            │   │
-│   │   • 10 biases (one per digit class)                                     │   │
-│   └─────────────────────────────────────────────────────────────────────────┘   │
-│         │                                                                       │
-│         ▼                                                                       │
-│   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │   Output: [0.02, 0.01, 0.03, 0.85, 0.01, 0.02, 0.02, 0.02, 0.01, 0.01] │   │
-│   │                              ▲                                          │   │
-│   │                        Predicted: 3                                     │   │
-│   └─────────────────────────────────────────────────────────────────────────┘   │
-│                                                                                 │
-│   TOTAL PARAMETERS: 100,352 + 128 + 1,280 + 10 = 101,770                       │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-### Training Logic
-
-Uses **Stochastic Gradient Descent (SGD)** and **CrossEntropyLoss**.
+Uses a **custom training loop** with manual gradient zeroing and stepping.
 
 ```python
-# Training Loop (runs inside Streamlit)
-# lr is configurable in the UI (default: 0.01)
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
-criterion = nn.CrossEntropyLoss()
-
-for epoch in range(num_epochs):
-    for batch_x, batch_y in dataloader:
-        optimizer.zero_grad()
-        outputs = model(batch_x)
-        loss = criterion(outputs, batch_y)
-        loss.backward()
-        optimizer.step()
+# PyTorch: Full control over every step
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc1 = nn.Linear(784, 128)
+        self.fc2 = nn.Linear(128, 10)
     
-    # Update Streamlit UI with loss value
-    loss_history.append(loss.item())
-    progress_bar.progress((epoch + 1) / num_epochs)
+    def forward(self, x):
+        x = F.relu(self.fc1(x))
+        return self.fc2(x)
+
+# Manual training loop
+optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+for epoch in range(epochs):
+    optimizer.zero_grad()           # ← Manual gradient reset
+    outputs = model(x_batch)
+    loss = criterion(outputs, y_batch)
+    loss.backward()                 # ← Manual backprop
+    optimizer.step()                # ← Manual weight update
 ```
-
-### Cloud Logic
-
-Authenticates via **Interactive Login** (or Service Principal) and uses `Model.register()` from `azureml-core`.
-
-```python
-from azureml.core import Workspace, Model
-
-# Connect to Azure ML Workspace
-ws = Workspace.from_config()  # or interactive auth
-
-# Register the trained model
-model = Model.register(
-    workspace=ws,
-    model_path="models/simple_nn.pth",
-    model_name="mnist_classifier"
-)
-```
-
----
-
-## ⚙️ How Does It Work
-
-The user navigates through **4 tabs** in the Streamlit UI:
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           4-TAB WORKFLOW                                        │
+│                         PYTORCH TRAINING FLOW                                   │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   ┌─────────────┬─────────────┬─────────────┬─────────────┐                     │
-│   │ 📊 Tab 1    │ ⚙️ Tab 2    │ 🔥 Tab 3    │ ☁️ Tab 4    │                     │
-│   │ Data        │ Architecture│ Training    │ Azure       │                     │
-│   │ Inspector   │ View        │ Lab         │ Deployment  │                     │
-│   └──────┬──────┴──────┬──────┴──────┬──────┴──────┬──────┘                     │
-│          │             │             │             │                            │
-│          ▼             ▼             ▼             ▼                            │
-│   ┌─────────────┐┌─────────────┐┌─────────────┐┌─────────────┐                  │
-│   │ Fetches     ││ Displays    ││ Executes    ││ Validates   │                  │
-│   │ random      ││ code def    ││ training    ││ local model │                  │
-│   │ samples     ││ of the      ││ loop,       ││ exists,     │                  │
-│   │ from        ││ model       ││ stores loss ││ connects to │                  │
-│   │ torchvision ││ (SimpleNN)  ││ metrics in  ││ Azure via   │                  │
-│   │ .datasets   ││             ││ list, plots ││ AzureManager│                  │
-│   │             ││             ││ with        ││ and uploads │                  │
-│   │             ││             ││ Matplotlib  ││ the file    │                  │
-│   │             ││             ││             ││             │                  │
-│   │             ││             ││ Saves to    ││             │                  │
-│   │             ││             ││ models/     ││             │                  │
-│   └─────────────┘└─────────────┘└─────────────┘└─────────────┘                  │
+│   ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐ │
+│   │  zero_   │───►│  forward │───►│  loss    │───►│  back    │───►│  step    │ │
+│   │  grad()  │    │   pass   │    │  compute │    │  ward()  │    │   ()     │ │
+│   └──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘ │
+│                                                                                 │
+│   YOU control every step — maximum flexibility, maximum responsibility          │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
 
-### Data Flow Summary
+---
+
+### 🟠 TensorFlow Engine — Declarative / Keras API
+
+Uses the **`model.fit()` API** hooked into a **custom StreamlitCallback** to update the UI in real-time.
+
+```python
+# TensorFlow: Declarative and concise
+model = tf.keras.Sequential([
+    tf.keras.layers.Flatten(input_shape=(28, 28)),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10)
+])
+
+model.compile(
+    optimizer='sgd',
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+)
+
+# Custom callback for Streamlit UI updates
+class StreamlitCallback(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        loss_history.append(logs['loss'])
+        progress_bar.progress((epoch + 1) / epochs)
+
+# One-liner training
+model.fit(x_train, y_train, epochs=epochs, callbacks=[StreamlitCallback()])
+```
+
+<div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           DATA FLOW                                             │
+│                       TENSORFLOW TRAINING FLOW                                  │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   Local Data (MNIST)                                                            │
-│        │                                                                        │
-│        ▼                                                                        │
-│   PyTorch DataLoader                                                            │
-│        │                                                                        │
-│        ▼                                                                        │
-│   SimpleNN Model                                                                │
-│        │                                                                        │
-│        ▼                                                                        │
-│   Local .pth File (models/simple_nn.pth)                                        │
-│        │                                                                        │
-│        ▼                                                                        │
-│   Azure Blob Storage (via AML Registry)                                         │
+│   ┌──────────────────────────────────────────────────────────────────────────┐  │
+│   │                           model.fit()                                    │  │
+│   │                                                                          │  │
+│   │   Internally handles:  forward → loss → backward → update                │  │
+│   │                                                                          │  │
+│   │   You hook in via:     ┌─────────────────────┐                           │  │
+│   │                        │ StreamlitCallback   │                           │  │
+│   │                        │ on_epoch_end()      │                           │  │
+│   │                        └─────────────────────┘                           │  │
+│   └──────────────────────────────────────────────────────────────────────────┘  │
+│                                                                                 │
+│   KERAS handles the loop — you configure and observe                            │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+</div>
+
+---
+
+### ☁️ Azure Integration
+
+Uses `azureml-core` to authenticate and register model files to the cloud registry.
+
+```python
+from azureml.core import Workspace, Model
+
+ws = Workspace.from_config()
+
+# Register PyTorch model
+Model.register(ws, model_path="models/simple_nn.pth", model_name="pytorch_mnist")
+
+# Register TensorFlow model
+Model.register(ws, model_path="models/simple_nn.h5", model_name="tensorflow_mnist")
+```
+
+---
+
+## ⚙️ How Does It Work
+
+The user navigates through **5 tabs** in the Streamlit UI:
+
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           5-TAB WORKFLOW                                        │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   ┌───────────┬───────────┬───────────┬───────────┬───────────┐                 │
+│   │ 📊 Tab 1  │ 🆚 Tab 2  │ 🔥 Tab 3  │ 🟠 Tab 4  │ ☁️ Tab 5  │                 │
+│   │   Data    │   Code    │  PyTorch  │TensorFlow │   Azure   │                 │
+│   │ Inspector │   Diff    │   Lab     │   Lab     │  Deploy   │                 │
+│   └─────┬─────┴─────┬─────┴─────┬─────┴─────┬─────┴─────┬─────┘                 │
+│         │           │           │           │           │                       │
+│         ▼           ▼           ▼           ▼           ▼                       │
+│   ┌───────────┐┌───────────┐┌───────────┐┌───────────┐┌───────────┐             │
+│   │  View     ││  Compare  ││  Manual   ││  Keras    ││  Select   │             │
+│   │  MNIST    ││  PyTorch  ││  training ││  model.   ││  .pth or  │             │
+│   │  samples  ││  vs TF    ││  loop     ││  fit()    ││  .h5 file │             │
+│   │           ││  code     ││  with     ││  with     ││           │             │
+│   │           ││  side by  ││  teal     ││  orange   ││  Upload   │             │
+│   │           ││  side     ││  loss     ││  loss     ││  to Azure │             │
+│   │           ││           ││  curve    ││  curve    ││           │             │
+│   └───────────┘└───────────┘└───────────┘└───────────┘└───────────┘             │
+│                                                                                 │
+│        EXPLORE → UNDERSTAND → TRAIN PYTORCH → TRAIN TF → DEPLOY                 │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+### Tab Responsibilities
+
+| Tab | Name | Purpose |
+|:---:|:-----|:--------|
+| 1 | **Data Inspector** | View random MNIST samples, understand the input |
+| 2 | **Code Diff** | Compare PyTorch vs TensorFlow implementations |
+| 3 | **PyTorch Lab** | Train with manual loop, see teal loss curve |
+| 4 | **TensorFlow Lab** | Train with Keras API, see orange loss curve |
+| 5 | **Azure Deployment** | Upload `.pth` or `.h5` to cloud registry |
 
 ---
 
@@ -484,15 +488,27 @@ The user navigates through **4 tabs** in the Streamlit UI:
 | **Python** | 3.9 or 3.10 |
 | **OS** | Windows, macOS, or Linux |
 | **RAM** | 4GB minimum (8GB recommended) |
-| **Internet** | Required (MNIST download + Azure connection) |
+| **Internet** | Required (MNIST download + Azure) |
 
-### Cloud Requirements
+### Library Requirements
+
+| Library | Purpose |
+|:--------|:--------|
+| `torch` | PyTorch deep learning framework |
+| `torchvision` | MNIST dataset for PyTorch |
+| `tensorflow` | TensorFlow deep learning framework |
+| `streamlit` | Interactive dashboard |
+| `azureml-core` | Azure ML SDK |
+| `matplotlib` | Visualization |
+| `numpy`, `pandas` | Data handling |
+
+### Cloud Requirements (Optional)
 
 | Requirement | Description |
 |:------------|:------------|
 | **Azure Subscription** | Active Microsoft Azure account |
-| **Azure ML Workspace** | Pre-configured workspace (or create during setup) |
-| **Permissions** | Contributor role on the ML Workspace |
+| **Azure ML Workspace** | Pre-configured workspace |
+| **Permissions** | Contributor role on workspace |
 
 ---
 
@@ -509,51 +525,52 @@ The user navigates through **4 tabs** in the Streamlit UI:
 │   │                      STREAMLIT FRONTEND                                 │   │
 │   │                         (app.py)                                        │   │
 │   │                                                                         │   │
-│   │   ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐           │   │
-│   │   │  Tab 1    │  │  Tab 2    │  │  Tab 3    │  │  Tab 4    │           │   │
-│   │   │  Data     │  │  Arch     │  │  Train    │  │  Deploy   │           │   │
-│   │   └───────────┘  └───────────┘  └───────────┘  └───────────┘           │   │
+│   │   ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐          │   │
+│   │   │  Tab 1  │ │  Tab 2  │ │  Tab 3  │ │  Tab 4  │ │  Tab 5  │          │   │
+│   │   │  Data   │ │  Diff   │ │ PyTorch │ │   TF    │ │  Azure  │          │   │
+│   │   └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘          │   │
 │   └───────────────────────────────┬─────────────────────────────────────────┘   │
 │                                   │                                             │
-│               ┌───────────────────┼───────────────────┐                         │
-│               │                   │                   │                         │
-│               ▼                   ▼                   ▼                         │
-│   ┌───────────────────┐  ┌───────────────┐  ┌───────────────────┐              │
-│   │    model.py       │  │  Training     │  │  azure_manager.py │              │
-│   │                   │  │  Loop         │  │                   │              │
-│   │  class SimpleNN:  │  │               │  │  class AzureManager│              │
-│   │    __init__()     │  │  • Optimizer  │  │    connect()      │              │
-│   │    forward()      │  │  • Loss       │  │    register()     │              │
-│   │                   │  │  • Epochs     │  │    upload()       │              │
-│   └───────────────────┘  └───────────────┘  └─────────┬─────────┘              │
-│               │                   │                   │                         │
-│               ▼                   ▼                   ▼                         │
-│   ┌───────────────────────────────────────────────────────────────────────┐     │
-│   │                         PyTorch / TorchVision                         │     │
-│   │                                                                       │     │
-│   │   • nn.Module        • DataLoader        • MNIST Dataset              │     │
-│   │   • nn.Linear        • transforms        • 60,000 images              │     │
-│   │   • F.relu           • batch processing                               │     │
-│   └───────────────────────────────────────────────────────────────────────┘     │
-│                                   │                                             │
-│                                   ▼                                             │
-│   ┌───────────────────────────────────────────────────────────────────────┐     │
-│   │                      LOCAL FILE SYSTEM                                │     │
-│   │                                                                       │     │
-│   │   models/                                                             │     │
-│   │   └── simple_nn.pth  ← Saved trained weights                          │     │
-│   └───────────────────────────────────────────────────────────────────────┘     │
-│                                   │                                             │
-│                                   ▼                                             │
-│   ┌───────────────────────────────────────────────────────────────────────┐     │
-│   │                      ☁️ AZURE MACHINE LEARNING                        │     │
-│   │                                                                       │     │
-│   │   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐               │     │
-│   │   │  Workspace  │───►│ Blob Storage│───►│Model Registry│              │     │
-│   │   └─────────────┘    └─────────────┘    └─────────────┘               │     │
-│   │                                                                       │     │
-│   │   Authentication: Interactive Login / Service Principal               │     │
-│   └───────────────────────────────────────────────────────────────────────┘     │
+│               ┌───────────────────┴───────────────────┐                         │
+│               │                                       │                         │
+│               ▼                                       ▼                         │
+│   ┌───────────────────────────┐       ┌───────────────────────────┐             │
+│   │       model.py            │       │       model_tf.py         │             │
+│   │                           │       │                           │             │
+│   │  🔥 PyTorch Class         │       │  🟠 TensorFlow Function   │             │
+│   │                           │       │                           │             │
+│   │  class SimpleNN:          │       │  def create_model():      │             │
+│   │    nn.Module              │       │    keras.Sequential       │             │
+│   │    forward()              │       │    compile()              │             │
+│   │                           │       │                           │             │
+│   │  Training:                │       │  Training:                │             │
+│   │    Manual loop            │       │    model.fit()            │             │
+│   │    optimizer.step()       │       │    callbacks              │             │
+│   │                           │       │                           │             │
+│   │  Output: simple_nn.pth    │       │  Output: simple_nn.h5     │             │
+│   └─────────────┬─────────────┘       └─────────────┬─────────────┘             │
+│                 │                                   │                           │
+│                 └─────────────┬─────────────────────┘                           │
+│                               │                                                 │
+│                               ▼                                                 │
+│                    ┌───────────────────────────┐                                │
+│                    │     azure_manager.py      │                                │
+│                    │                           │                                │
+│                    │  ☁️ Azure SDK Wrapper     │                                │
+│                    │                           │                                │
+│                    │  • Authentication         │                                │
+│                    │  • Model.register()       │                                │
+│                    │  • Supports .pth & .h5    │                                │
+│                    └─────────────┬─────────────┘                                │
+│                                  │                                              │
+│                                  ▼                                              │
+│                    ┌───────────────────────────┐                                │
+│                    │  ☁️ AZURE ML REGISTRY     │                                │
+│                    │                           │                                │
+│                    │  Stores both:             │                                │
+│                    │  • pytorch_mnist (.pth)   │                                │
+│                    │  • tensorflow_mnist (.h5) │                                │
+│                    └───────────────────────────┘                                │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -565,52 +582,72 @@ The user navigates through **4 tabs** in the Streamlit UI:
 | Component | File | Responsibility |
 |:----------|:-----|:---------------|
 | **Frontend** | `app.py` | Streamlit UI, tab navigation, visualization |
-| **Model Definition** | `model.py` | PyTorch SimpleNN architecture |
-| **Cloud Manager** | `azure_manager.py` | Azure ML SDK wrapper for authentication & upload |
+| **PyTorch Model** | `model.py` | `nn.Module` class, manual training loop |
+| **TensorFlow Model** | `model_tf.py` | Keras Sequential, `model.fit()` with callbacks |
+| **Cloud Manager** | `azure_manager.py` | Azure authentication, model upload |
 
 ---
 
 ## 🤖 Model Specifications
 
-### SimpleNN Architecture
+### Identical Architecture
 
-| Property | Specification |
-|:---------|:--------------|
-| **Type** | Feedforward Neural Network (FNN) |
-| **Framework** | PyTorch |
-| **Input Dimensions** | 784 (flattened 28×28 images) |
-| **Hidden Layers** | 1 layer with **128 units**, ReLU activation |
-| **Output Dimensions** | 10 units (Linear) — digit classes 0-9 |
-| **Total Parameters** | ~101,770 |
+Both frameworks implement the **exact same network** for fair comparison:
 
-### Training Configuration
+<div align="center">
 
-| Property | Specification |
-|:---------|:--------------|
-| **Optimizer** | SGD (Stochastic Gradient Descent) |
-| **Learning Rate** | Configurable via UI (default: 0.01) |
-| **Loss Function** | CrossEntropyLoss |
-| **Batch Size** | 64 |
-| **Default Epochs** | 5 |
-
-### PyTorch Code
-
-```python
-import torch.nn as nn
-import torch.nn.functional as F
-
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(784, 128)   # Input → Hidden
-        self.fc2 = nn.Linear(128, 10)    # Hidden → Output
-    
-    def forward(self, x):
-        x = x.view(-1, 784)              # Flatten 28x28 → 784
-        x = F.relu(self.fc1(x))          # Hidden layer + ReLU
-        x = self.fc2(x)                  # Output layer
-        return x
 ```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    IDENTICAL FEEDFORWARD NETWORK                                │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   INPUT                    HIDDEN                    OUTPUT                     │
+│   ─────                    ──────                    ──────                     │
+│                                                                                 │
+│   28×28 Image              128 Units                 10 Classes                 │
+│   (Flattened)              (ReLU)                    (Logits)                   │
+│                                                                                 │
+│   ┌─────────┐            ┌─────────┐              ┌─────────┐                   │
+│   │   784   │───────────►│   128   │─────────────►│   10    │                   │
+│   │ neurons │  Linear    │ neurons │   Linear     │ neurons │                   │
+│   └─────────┘            └─────────┘              └─────────┘                   │
+│                             ReLU                                                │
+│                                                                                 │
+│   ═══════════════════════════════════════════════════════════════════════════   │
+│                                                                                 │
+│   PYTORCH SYNTAX                       TENSORFLOW SYNTAX                        │
+│   ──────────────                       ─────────────────                        │
+│                                                                                 │
+│   self.fc1 = nn.Linear(784, 128)       Dense(128, activation='relu',           │
+│   self.fc2 = nn.Linear(128, 10)              input_shape=(784,))               │
+│   x = F.relu(self.fc1(x))              Dense(10)                               │
+│   x = self.fc2(x)                                                              │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+### Specifications Table
+
+| Property | Specification |
+|:---------|:--------------|
+| **Architecture** | Feedforward Neural Network (FNN) |
+| **Input** | 784 dimensions (flattened 28×28 image) |
+| **Hidden Layers** | 1 layer with **128 units**, ReLU activation |
+| **Output** | 10 units (Linear logits) — digits 0-9 |
+| **Parameters** | ~101,770 (identical in both frameworks) |
+
+### Framework-Specific Implementation
+
+| Aspect | PyTorch | TensorFlow |
+|:-------|:--------|:-----------|
+| **Style** | `nn.Module` class | `keras.Sequential` list |
+| **Definition** | Object-Oriented | Declarative/Functional |
+| **Training** | Manual loop | `model.fit()` |
+| **Save Format** | `.pth` (state dict) | `.h5` (HDF5) |
+| **Optimizer** | `torch.optim.SGD` | `tf.keras.optimizers.SGD` |
+| **Loss** | `nn.CrossEntropyLoss()` | `SparseCategoricalCrossentropy` |
 
 ---
 
@@ -621,10 +658,11 @@ class SimpleNN(nn.Module):
 | Layer | Technology | Version | Purpose |
 |:-----:|:----------:|:-------:|:--------|
 | 🐍 | **Python** | 3.10+ | Core runtime |
-| 🔥 | **PyTorch** | Latest | Deep learning framework |
-| 🖼️ | **Torchvision** | Latest | MNIST dataset & transforms |
-| ☁️ | **Azure ML SDK** | azureml-core | Cloud authentication & model registry |
-| 🖥️ | **Streamlit** | Latest | Interactive dashboard UI |
+| 🔥 | **PyTorch** | Latest | Deep learning (Engine 1) |
+| 🟠 | **TensorFlow** | 2.x | Deep learning (Engine 2) |
+| 🖼️ | **Torchvision** | Latest | MNIST dataset (PyTorch) |
+| ☁️ | **Azure ML SDK** | azureml-core | Cloud deployment |
+| 🖥️ | **Streamlit** | Latest | Interactive dashboard |
 | 🔢 | **NumPy** | Latest | Array operations |
 | 📊 | **Matplotlib** | Latest | Loss curve visualization |
 | 📋 | **Pandas** | Latest | Data handling |
@@ -635,7 +673,7 @@ class SimpleNN(nn.Module):
 
 ## 📥 Install Dependencies
 
-Create a `requirements.txt` file with the following contents:
+Create a `requirements.txt` file:
 
 ```
 streamlit
@@ -645,12 +683,13 @@ azureml-core
 matplotlib
 numpy
 pandas
+tensorflow
 ```
 
 Or install directly:
 
 ```bash
-pip install streamlit torch torchvision azureml-core matplotlib numpy pandas
+pip install streamlit torch torchvision azureml-core matplotlib numpy pandas tensorflow
 ```
 
 ---
@@ -660,13 +699,13 @@ pip install streamlit torch torchvision azureml-core matplotlib numpy pandas
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/WSalim2024/Azure-Neural-Net-Studio.git
+git clone https://github.com/WSalim2024/Azure-Neural-Net-Studio-Dual-Engine.git
 ```
 
 ### Step 2: Navigate to Project Directory
 
 ```bash
-cd Azure-Neural-Net-Studio
+cd Azure-Neural-Net-Studio-Dual-Engine
 ```
 
 ### Step 3: Create Virtual Environment
@@ -711,12 +750,12 @@ pip install -r requirements.txt
 ```bash
 python -c "
 import torch
+import tensorflow as tf
 import streamlit
-import azureml.core
 
-print('✅ All dependencies installed successfully!')
+print('✅ Dual-Engine Ready!')
 print(f'   PyTorch: {torch.__version__}')
-print(f'   Azure ML: {azureml.core.VERSION}')
+print(f'   TensorFlow: {tf.__version__}')
 "
 ```
 
@@ -741,7 +780,7 @@ Network URL: http://192.168.x.x:8501
 
 ## 📖 User Guide
 
-### Step-by-Step Workflow
+### Recommended Workflow
 
 <div align="center">
 
@@ -750,67 +789,57 @@ Network URL: http://192.168.x.x:8501
 │                           USER WORKFLOW                                         │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   STEP 1: CONFIGURE (Optional)                                                  │
-│   ────────────────────────────                                                  │
+│   STEP 1: COMPARE                                                               │
+│   ───────────────                                                               │
 │                                                                                 │
-│   • Enter Azure credentials in the sidebar to enable cloud features             │
-│   • Or skip this to use only local training features                            │
+│   Go to Tab 2 (Code Diff) to read the architectural differences                 │
+│   between PyTorch and TensorFlow implementations.                               │
 │                                                                                 │
 │   ─────────────────────────────────────────────────────────────────────────     │
 │                                                                                 │
-│   STEP 2: TRAIN                                                                 │
-│   ─────────────                                                                 │
+│   STEP 2: TRAIN PYTORCH                                                         │
+│   ─────────────────────                                                         │
 │                                                                                 │
-│   • Go to "🔥 Training Lab" tab                                                 │
-│   • Set Epochs to 5 (or your preference)                                        │
+│   • Go to Tab 3 (PyTorch Lab)                                                   │
+│   • Set epochs and learning rate                                                │
 │   • Click "Start Training"                                                      │
-│   • Watch the progress bar and loss curve update live                           │
+│   • Watch the TEAL 🟢 loss curve descend                                        │
+│   • Model saves to: models/simple_nn.pth                                        │
 │                                                                                 │
 │   ─────────────────────────────────────────────────────────────────────────     │
 │                                                                                 │
-│   STEP 3: VERIFY                                                                │
-│   ──────────────                                                                │
+│   STEP 3: TRAIN TENSORFLOW                                                      │
+│   ────────────────────────                                                      │
 │                                                                                 │
-│   • Wait for "✅ Training Complete" message                                     │
-│   • Observe the loss graph stabilizing (decreasing trend)                       │
-│   • Model is automatically saved to models/simple_nn.pth                        │
+│   • Go to Tab 4 (TensorFlow Lab)                                                │
+│   • Use same epochs and learning rate for fair comparison                       │
+│   • Click "Start Training"                                                      │
+│   • Watch the ORANGE 🟠 loss curve descend                                      │
+│   • Model saves to: models/simple_nn.h5                                         │
 │                                                                                 │
 │   ─────────────────────────────────────────────────────────────────────────     │
 │                                                                                 │
 │   STEP 4: DEPLOY                                                                │
 │   ──────────────                                                                │
 │                                                                                 │
-│   • Go to "☁️ Azure Deployment" tab                                             │
-│   • Enter a model name (e.g., "mnist_classifier_v1")                            │
-│   • Click "Register Model to Azure"                                             │
-│   • Wait for "✅ Model uploaded to cloud!" confirmation                         │
+│   • Go to Tab 5 (Azure Deployment)                                              │
+│   • Select which model file to upload:                                          │
+│     ○ PyTorch: simple_nn.pth                                                    │
+│     ○ TensorFlow: simple_nn.h5                                                  │
+│   • Click "Register to Azure"                                                   │
+│   • Verify upload success                                                       │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
 
-### Expected Loss Curve
+### Color Legend
 
-After 5 epochs, you should see a loss curve similar to:
-
-```
-Loss
-  │
-2.5├──●
-  │    \
-2.0├     \
-  │       \
-1.5├        \
-  │          \
-1.0├           ●
-  │             \
-0.5├              ●───●───●
-  │
-0.0├────┬────┬────┬────┬────
-    1    2    3    4    5
-              Epoch
-```
+| Color | Framework | Training Style |
+|:------|:----------|:---------------|
+| 🟢 **Teal** | PyTorch | Manual loop with `optimizer.step()` |
+| 🟠 **Orange** | TensorFlow | Keras `model.fit()` with callbacks |
 
 ---
 
@@ -818,15 +847,15 @@ Loss
 
 | Limitation | Description | Reason |
 |:-----------|:------------|:-------|
-| **Compute** | Runs on local CPU only | Large epoch counts (>20) may freeze UI temporarily |
-| **Azure Auth** | Uses interactive authentication | May require browser popup login |
+| **Compute** | Runs on local CPU only | Optimized for small datasets like MNIST |
+| **Session** | Data not persisted on refresh | Except for saved model files (.pth, .h5) |
+| **TF Version** | Designed for TensorFlow 2.x | Uses Keras API extensively |
 | **Dataset** | Hardcoded to MNIST | Demonstration purposes |
-| **Model Size** | Simple 2-layer network | Educational clarity |
-| **No GPU** | CPU-only training | Keeps setup simple |
+| **Azure Auth** | Interactive authentication | May require browser popup |
 
-### Azure Authentication Note
+### Framework Compatibility Note
 
-> 💡 **First-time Azure users:** When you click "Connect to Azure", a browser window may open asking you to log in to your Microsoft account. This is normal interactive authentication behavior.
+> ⚠️ **TensorFlow 2.x Required:** This project uses the `tf.keras` API. TensorFlow 1.x is not supported.
 
 ---
 
@@ -842,18 +871,12 @@ Loss
 
 </div>
 
-This is an **educational tool** demonstrating PyTorch + Azure ML integration.
+This is an **educational tool** demonstrating PyTorch + TensorFlow interoperability with Azure ML.
 
 ⚠️ **Azure Usage Warning:**
 - Azure services may incur costs depending on your subscription plan
 - The author is **not responsible** for any cloud charges
-- Monitor your Azure usage in the Azure Portal
-- Consider using Azure free tier for learning
-
-✅ **Safe Practices:**
-- Use a development/sandbox subscription for testing
-- Set up billing alerts in Azure Portal
-- Delete unused resources after experimentation
+- Monitor your usage in the Azure Portal
 
 ---
 
@@ -872,17 +895,17 @@ This is an **educational tool** demonstrating PyTorch + Azure ML integration.
 
 ---
 
-**Built with 🔥 PyTorch, ☁️ Azure, and 🎯 MLOps best practices**
+**Built with 🔥 PyTorch, 🟠 TensorFlow, ☁️ Azure, and 🆚 Competitive Spirit**
 
-*Azure Neural Net Studio — From Local Experiment to Cloud Deployment*
+*Azure Neural Net Studio: Dual-Engine Edition — Why Choose When You Can Compare?*
 
 ---
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
-║   "The best model is the one that's deployed.                                 ║
-║    This studio takes you from notebook to production."                        ║
+║   "The best framework is the one you understand.                              ║
+║    With this studio, you'll understand both."                                 ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
