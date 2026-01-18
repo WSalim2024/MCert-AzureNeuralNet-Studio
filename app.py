@@ -9,23 +9,24 @@ import os
 import time
 
 # --- IMPORT OUR MODULES ---
-from model import SimpleNN  # PyTorch
-from model_tf import create_tf_model  # TensorFlow
+from model import SimpleNN  # PyTorch Model
+from model_tf import create_tf_model  # TensorFlow Model
 from azure_manager import AzureManager
 
 # --- PAGE CONFIG ---
-st.set_page_config(page_title="Azure Neural Net Studio", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="Azure Neural Net Studio v2.1", page_icon="🧠", layout="wide")
 
 # --- CUSTOM TENSORFLOW CALLBACK (For Live UI Updates) ---
 import tensorflow as tf
 
 
 class StreamlitTFCallback(tf.keras.callbacks.Callback):
-    def __init__(self, progress_bar, status_text, chart_placeholder):
+    def __init__(self, progress_bar, status_text, chart_placeholder, total_epochs):
         super().__init__()
         self.progress_bar = progress_bar
         self.status_text = status_text
         self.chart_placeholder = chart_placeholder
+        self.total_epochs = total_epochs  # Added to track total epochs dynamically
         self.loss_history = []
 
     def on_epoch_end(self, epoch, logs=None):
@@ -34,9 +35,8 @@ class StreamlitTFCallback(tf.keras.callbacks.Callback):
         self.loss_history.append(loss)
 
         # 2. Update Progress Bar
-        # We assume 5 epochs for this demo
-        self.progress_bar.progress((epoch + 1) / 5)
-        self.status_text.metric(f"Epoch {epoch + 1}/5", f"Loss: {loss:.4f}")
+        self.progress_bar.progress((epoch + 1) / self.total_epochs)
+        self.status_text.metric(f"Epoch {epoch + 1}/{self.total_epochs}", f"Loss: {loss:.4f}")
 
         # 3. Update Chart
         fig, ax = plt.subplots()
@@ -50,9 +50,24 @@ class StreamlitTFCallback(tf.keras.callbacks.Callback):
         time.sleep(0.5)
 
 
-# --- SIDEBAR ---
-st.sidebar.title("☁️ Azure Configuration")
-st.sidebar.markdown("Connect to your Azure ML Workspace")
+# --- SIDEBAR CONFIGURATION ---
+st.sidebar.title("⚙️ Model Config")
+st.sidebar.markdown("Customize your training run.")
+
+# 1. Dataset Selector
+dataset_name = st.sidebar.selectbox(
+    "Select Dataset",
+    ("MNIST (Digits)", "Fashion MNIST (Clothing)")
+)
+
+# 2. Optimizer Selector
+optimizer_name = st.sidebar.selectbox(
+    "Select Optimizer",
+    ("SGD", "Adam")
+)
+
+st.sidebar.markdown("---")
+st.sidebar.title("☁️ Azure Config")
 sub_id = st.sidebar.text_input("Subscription ID", type="password")
 res_grp = st.sidebar.text_input("Resource Group")
 ws_name = st.sidebar.text_input("Workspace Name")
@@ -69,30 +84,40 @@ if st.sidebar.button("🔌 Connect to Azure"):
             st.sidebar.error(msg)
 
 # --- MAIN LAYOUT ---
-st.title("🧠 Azure Neural Net Studio: Dual-Engine Edition")
-st.markdown("""
-Professional Workbench for **PyTorch** and **TensorFlow** experimentation and **Azure** deployment.
+st.title("🧠 Azure Neural Net Studio: v2.1")
+st.markdown(f"""
+**Current Configuration:** Dataset: `{dataset_name}` | Optimizer: `{optimizer_name}` | Epochs: `10`
 """)
 
-# NEW TAB ADDED: "🆚 Framework Showdown"
-tabs = st.tabs(["📊 Data Inspector", "⚙️ Architecture", "🔥 PyTorch Lab", "🟠 TensorFlow Lab", "🚀 Azure Deploy"])
+tabs = st.tabs(["📊 Data Inspector", "🆚 Code Diff", "🔥 PyTorch Lab", "🟠 TensorFlow Lab", "🚀 Azure Deploy"])
 
 # =========================================
 # TAB 1: DATA INSPECTOR
 # =========================================
 with tabs[0]:
-    st.header("MNIST Dataset Preview")
+    st.header(f"{dataset_name} Preview")
+
     if st.button("📥 Load Sample Batch"):
         transform = transforms.ToTensor()
-        mnist_data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-        loader = torch.utils.data.DataLoader(mnist_data, batch_size=10, shuffle=True)
+
+        # DYNAMIC LOADING
+        if dataset_name == "MNIST (Digits)":
+            data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+            labels_map = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9'}
+        else:
+            data = datasets.FashionMNIST(root='./data', train=True, download=True, transform=transform)
+            labels_map = {0: 'T-shirt', 1: 'Trouser', 2: 'Pullover', 3: 'Dress', 4: 'Coat',
+                          5: 'Sandal', 6: 'Shirt', 7: 'Sneaker', 8: 'Bag', 9: 'Boot'}
+
+        loader = torch.utils.data.DataLoader(data, batch_size=10, shuffle=True)
         images, labels = next(iter(loader))
 
         fig, axes = plt.subplots(1, 10, figsize=(15, 2))
         for i in range(10):
             axes[i].imshow(images[i].squeeze(), cmap='gray')
             axes[i].axis('off')
-            axes[i].set_title(f"{labels[i].item()}")
+            lbl_idx = labels[i].item()
+            axes[i].set_title(labels_map[lbl_idx])
         st.pyplot(fig)
 
 # =========================================
@@ -100,10 +125,9 @@ with tabs[0]:
 # =========================================
 with tabs[1]:
     st.header("Code Comparison: PyTorch vs TensorFlow")
-    st.markdown("See how the **same** neural network is defined in both frameworks.")
+    st.markdown("Both models accept **784 inputs** (28x28) and output **10 classes**.")
 
     col1, col2 = st.columns(2)
-
     with col1:
         st.subheader("🔥 PyTorch (Object-Oriented)")
         st.code("""
@@ -118,7 +142,6 @@ class SimpleNN(nn.Module):
         x = F.relu(self.fc1(x))
         return self.fc2(x)
         """, language="python")
-        st.info("Explicit control flow. You define the layers and the path.")
 
     with col2:
         st.subheader("🟠 TensorFlow (Declarative)")
@@ -129,32 +152,46 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10)
 ])
         """, language="python")
-        st.info("Configuration style. You stack layers like lego blocks.")
 
 # =========================================
 # TAB 3: PYTORCH LAB
 # =========================================
 with tabs[2]:
     st.header("🔥 PyTorch Training Loop")
-    st.markdown("Manually controlling the training steps.")
 
     if st.button("▶️ Start PyTorch Training"):
-        # Setup
-        transform = transforms.ToTensor()
-        train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-        train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
+        # 0. Set Hyperparameters (Assignment Requirement)
+        EPOCHS = 10
+        BATCH_SIZE = 32
 
+        # 1. Dynamic Data Loading
+        transform = transforms.ToTensor()
+        if dataset_name == "MNIST (Digits)":
+            train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+        else:
+            train_dataset = datasets.FashionMNIST(root='./data', train=True, download=True, transform=transform)
+
+        train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
+
+        # 2. Init Model
         model = SimpleNN()
-        optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+        # 3. Dynamic Optimizer
+        lr = 0.01 if optimizer_name == "SGD" else 0.001
+        if optimizer_name == "SGD":
+            optimizer = optim.SGD(model.parameters(), lr=lr)
+        else:
+            optimizer = optim.Adam(model.parameters(), lr=lr)
+
         criterion = nn.CrossEntropyLoss()
 
-        # UI Elements
+        # UI Setup
         progress_bar = st.progress(0)
         status = st.empty()
         chart = st.empty()
         loss_hist = []
 
-        for epoch in range(5):
+        for epoch in range(EPOCHS):
             running_loss = 0.0
             for images, labels in train_loader:
                 optimizer.zero_grad()
@@ -168,59 +205,67 @@ with tabs[2]:
             loss_hist.append(avg_loss)
 
             # Update UI
-            progress_bar.progress((epoch + 1) / 5)
-            status.metric(f"Epoch {epoch + 1}/5", f"Loss: {avg_loss:.4f}")
+            progress_bar.progress((epoch + 1) / EPOCHS)
+            status.metric(f"Epoch {epoch + 1}/{EPOCHS}", f"Loss: {avg_loss:.4f}")
 
             fig, ax = plt.subplots()
-            ax.plot(loss_hist, marker='o', color='teal')
+            ax.plot(loss_hist, marker='o', color='teal', label=f'PyTorch ({optimizer_name})')
+            ax.legend()
             chart.pyplot(fig)
 
         torch.save(model.state_dict(), "models/simple_nn.pth")
-        st.success("✅ PyTorch Model Saved!")
+        st.success(f"✅ PyTorch Model ({dataset_name}) Saved!")
 
 # =========================================
-# TAB 4: TENSORFLOW LAB (NEW!)
+# TAB 4: TENSORFLOW LAB
 # =========================================
 with tabs[3]:
     st.header("🟠 TensorFlow Training Loop")
-    st.markdown("Using `model.fit()` with a custom **Streamlit Callback**.")
 
     if st.button("▶️ Start TensorFlow Training"):
-        with st.spinner("Preparing TensorFlow Data..."):
-            # Prepare Data (TF style)
-            mnist = tf.keras.datasets.mnist
-            (x_train, y_train), (x_test, y_test) = mnist.load_data()
-            x_train = x_train / 255.0  # Normalize
+        # 0. Set Hyperparameters
+        EPOCHS = 10
+        # Batch size defaults to 32 in model.fit(), so we are good.
 
-            # Create Model
+        with st.spinner(f"Loading {dataset_name}..."):
+            # 1. Dynamic Data Loading
+            if dataset_name == "MNIST (Digits)":
+                mnist = tf.keras.datasets.mnist
+            else:
+                mnist = tf.keras.datasets.fashion_mnist
+
+            (x_train, y_train), (x_test, y_test) = mnist.load_data()
+            x_train = x_train / 255.0
+
+            # 2. Create Model
             tf_model = create_tf_model()
             loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-            tf_model.compile(optimizer='sgd', loss=loss_fn, metrics=['accuracy'])
 
-            # UI Elements
+            # 3. Dynamic Optimizer (pass string 'sgd' or 'adam')
+            tf_model.compile(optimizer=optimizer_name.lower(), loss=loss_fn, metrics=['accuracy'])
+
+            # UI Setup
             tf_progress = st.progress(0)
             tf_status = st.empty()
             tf_chart = st.empty()
 
-            # Connect Custom Callback
-            streamlit_cb = StreamlitTFCallback(tf_progress, tf_status, tf_chart)
+            # Custom Callback (Passing EPOCHS now)
+            streamlit_cb = StreamlitTFCallback(tf_progress, tf_status, tf_chart, total_epochs=EPOCHS)
 
-            # TRAIN
-            tf_model.fit(x_train, y_train, epochs=5, callbacks=[streamlit_cb], verbose=0)
+            # Train
+            tf_model.fit(x_train, y_train, epochs=EPOCHS, callbacks=[streamlit_cb], verbose=0)
 
-            # Save
             if not os.path.exists('models'): os.makedirs('models')
             tf_model.save('models/tf_model.h5')
-            st.success("✅ TensorFlow Model Saved!")
+            st.success(f"✅ TensorFlow Model ({dataset_name}) Saved!")
 
 # =========================================
 # TAB 5: AZURE DEPLOY
 # =========================================
 with tabs[4]:
     st.header("🚀 Deploy to Azure")
-    st.markdown("Upload your trained models to the cloud.")
 
-    model_choice = st.radio("Select Model to Upload:", ["PyTorch (.pth)", "TensorFlow (.h5)"])
+    model_choice = st.radio("Select Model File:", ["PyTorch (.pth)", "TensorFlow (.h5)"])
 
     if st.button("☁️ Register Model"):
         if 'azure_mgr' not in st.session_state:
@@ -240,4 +285,4 @@ with tabs[4]:
                     res = mgr.register_model(path, name)
                     st.success(res)
             else:
-                st.error(f"File {path} not found. Please train the model first.")
+                st.error(f"File {path} not found. Train the model first.")

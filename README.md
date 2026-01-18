@@ -2,9 +2,9 @@
 
 # 🧠☁️ Azure Neural Net Studio: Dual-Engine Edition
 
-### **The Ultimate Framework Showdown**
+### **Version 2.1 — Multi-Dataset & Optimizer Update**
 
-*Design, Train, and Deploy Neural Networks with PyTorch AND TensorFlow — Side by Side*
+*Compare Frameworks, Datasets, and Optimizers — All in One Dashboard*
 
 ---
 
@@ -27,9 +27,12 @@
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
-║   "Two frameworks. One dashboard. Zero excuses."                              ║
+║   🆕 NEW IN v2.1                                                              ║
+║   ──────────────                                                              ║
 ║                                                                               ║
-║   PyTorch vs TensorFlow — the debate ends here. Now you can run both.        ║
+║   👗 Fashion MNIST Support — Train on T-shirts, Sneakers, Dresses            ║
+║   ⚡ Adam Optimizer — Compare convergence speed vs SGD                        ║
+║   🔟 Extended Training — Default 10 epochs for better visualization          ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -62,58 +65,62 @@
 
 ## 🚀 Overview
 
-**Azure Neural Net Studio: Dual-Engine Edition** is a professional **"Zero to Cloud"** workbench that unifies the two giants of Deep Learning. It enables users to design, train, and deploy Neural Networks using **both PyTorch and TensorFlow** from a single, interactive dashboard.
+**Azure Neural Net Studio: Dual-Engine Edition (v2.1)** is a professional **"Zero to Cloud"** workbench. It enables users to design, train, and deploy Neural Networks using **both PyTorch and TensorFlow** from a single, interactive dashboard.
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                      THE DUAL-ENGINE ARCHITECTURE                               │
+│                      VERSION 2.1 — THE COMPLETE WORKBENCH                       │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│                            📊 MNIST DATA                                        │
-│                                  │                                              │
-│                    ┌─────────────┴─────────────┐                                │
-│                    │                           │                                │
-│                    ▼                           ▼                                │
-│        ┌─────────────────────┐     ┌─────────────────────┐                      │
-│        │  🔥 PYTORCH         │     │  🟠 TENSORFLOW      │                      │
-│        │                     │     │                     │                      │
-│        │  Object-Oriented    │     │  Declarative        │                      │
-│        │  nn.Module Class    │     │  keras.Sequential   │                      │
-│        │                     │     │                     │                      │
-│        │  Manual Loop:       │     │  Keras API:         │                      │
-│        │  optimizer.step()   │     │  model.fit()        │                      │
-│        │                     │     │                     │                      │
-│        │  Output: .pth       │     │  Output: .h5        │                      │
-│        └──────────┬──────────┘     └──────────┬──────────┘                      │
-│                   │                           │                                 │
-│                   └─────────────┬─────────────┘                                 │
-│                                 │                                               │
-│                                 ▼                                               │
-│                    ┌─────────────────────────┐                                  │
-│                    │  ☁️ AZURE ML REGISTRY   │                                  │
-│                    │                         │                                  │
-│                    │  Register either:       │                                  │
-│                    │  • simple_nn.pth        │                                  │
-│                    │  • simple_nn.h5         │                                  │
-│                    └─────────────────────────┘                                  │
-│                                                                                 │
-│                    ONE DASHBOARD. TWO FRAMEWORKS. CLOUD READY.                  │
+│                         ┌─────────────────────────┐                             │
+│                         │    📊 SIDEBAR CONFIG    │                             │
+│                         │                         │                             │
+│                         │  Dataset:               │                             │
+│                         │  ○ MNIST (Digits)       │                             │
+│                         │  ● Fashion MNIST 👗     │ ← NEW!                      │
+│                         │                         │                             │
+│                         │  Optimizer:             │                             │
+│                         │  ○ SGD (Slow & Steady)  │                             │
+│                         │  ● Adam (Fast) ⚡       │ ← NEW!                      │
+│                         │                         │                             │
+│                         │  Epochs: [10] 🔟        │ ← Extended!                 │
+│                         └───────────┬─────────────┘                             │
+│                                     │                                           │
+│                    ┌────────────────┴────────────────┐                          │
+│                    │                                 │                          │
+│                    ▼                                 ▼                          │
+│        ┌─────────────────────┐         ┌─────────────────────┐                  │
+│        │  🔥 PYTORCH         │         │  🟠 TENSORFLOW      │                  │
+│        │                     │         │                     │                  │
+│        │  optim.SGD          │         │  'sgd'              │                  │
+│        │  optim.Adam ⚡      │         │  'adam' ⚡          │                  │
+│        │                     │         │                     │                  │
+│        │  Output: .pth       │         │  Output: .h5        │                  │
+│        └──────────┬──────────┘         └──────────┬──────────┘                  │
+│                   │                               │                             │
+│                   └───────────────┬───────────────┘                             │
+│                                   │                                             │
+│                                   ▼                                             │
+│                      ┌─────────────────────────┐                                │
+│                      │  ☁️ AZURE ML REGISTRY   │                                │
+│                      └─────────────────────────┘                                │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
 
-### Why Dual-Engine?
+### What's New in v2.1?
 
-| Question | Answer |
-|:---------|:-------|
-| "Which framework should I learn?" | **Both** — see them side by side |
-| "Which is faster?" | Train both and compare live |
-| "Which deploys easier?" | Same Azure workflow for both |
-| "Which code is cleaner?" | View the Code Diff tab |
+| Feature | v2.0 | v2.1 |
+|:--------|:----:|:----:|
+| **Datasets** | MNIST (Digits) only | ✅ MNIST + Fashion MNIST |
+| **Optimizers** | SGD only | ✅ SGD + Adam |
+| **Default Epochs** | 5 | ✅ 10 |
+| **Frameworks** | PyTorch + TensorFlow | PyTorch + TensorFlow |
+| **Azure Deploy** | ✅ | ✅ |
 
 ---
 
@@ -140,71 +147,108 @@ Side-by-side **code comparison** of PyTorch (Object-Oriented) vs. TensorFlow (De
 └─────────────────┴─────────────────┘
 ```
 
-*See exactly how the same network looks in different paradigms*
+*Compare paradigms in Tab 2*
 
 </td>
 <td width="50%">
 
-### 🔥 Dual Training Labs
+### 👗 Multi-Dataset Support
 
-Real-time training visualization for **both engines**:
+Toggle between **MNIST (Digits)** and **Fashion MNIST (Clothing)**.
 
 ```
-PyTorch Loss (Teal)     TensorFlow Loss (Orange)
-   │\                      │\
-   │ \                     │ \
-   │  \                    │  \
-   │   \_____              │   \_____
-   └──────────             └──────────
-     Epochs                  Epochs
+MNIST (Digits)          Fashion MNIST
+┌───┬───┬───┐          ┌───┬───┬───┐
+│ 0 │ 1 │ 2 │          │👕 │👖 │👗 │
+├───┼───┼───┤          ├───┼───┼───┤
+│ 3 │ 4 │ 5 │          │👔 │🧥 │👠 │
+├───┼───┼───┤          ├───┼───┼───┤
+│ 6 │ 7 │ 8 │          │👜 │👟 │🥾 │
+└───┴───┴───┘          └───┴───┴───┘
+  10 Classes             10 Classes
 ```
 
-*PyTorch: Manual Loop | TensorFlow: Custom Callbacks*
+*Same architecture, different domains*
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 📊 Data Inspector
+### ⚡ Dynamic Optimization
 
-Interactive preview of the **MNIST dataset** — shared by both frameworks.
+Compare convergence speed of **SGD vs. Adam**.
 
 ```
-┌─────────────────────────────────┐
-│  Shared Data Source             │
-│                                 │
-│    ┌───┐  ┌───┐  ┌───┐         │
-│    │ 5 │  │ 0 │  │ 4 │         │
-│    └───┘  └───┘  └───┘         │
-│                                 │
-│  Same preprocessing for both    │
-│  → Fair comparison guaranteed   │
-└─────────────────────────────────┘
+Loss
+  │
+  │\  ← Adam (Fast start)
+  │ \____
+  │      \____
+  │           \
+  │\              ← SGD (Slow & steady)
+  │  \
+  │    \____
+  │         \_____
+  └───────────────────
+           Epochs
 ```
+
+*Adam often converges faster, but SGD may generalize better*
 
 </td>
 <td width="50%">
 
+### 🔥 Dual Training Labs
+
+Real-time visualization with **color-coded loss curves**.
+
+| Framework | Color | Style |
+|:----------|:-----:|:------|
+| **PyTorch** | 🟢 Teal | Manual loop |
+| **TensorFlow** | 🟠 Orange | Keras callbacks |
+
+```
+Tab 3: PyTorch Lab
+████████████ 100%
+Loss: 0.234 ✓
+
+Tab 4: TensorFlow Lab
+████████████ 100%
+Loss: 0.241 ✓
+```
+
+*Train both, compare results*
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
 ### ☁️ Azure Integration
 
-**One-click connection** to Azure ML Workspace to register models from **either framework**.
+**One-click deployment** for both `.pth` (PyTorch) and `.h5` (TensorFlow) models to Azure ML Registry.
 
 ```
-┌─────────────────────────────────┐
-│  Azure Deployment Center        │
-│                                 │
-│  Select Model:                  │
-│  ○ PyTorch (.pth)               │
-│  ○ TensorFlow (.h5)             │
-│                                 │
-│  [ Register to Azure ]          │
-│                                 │
-│  ✅ Model uploaded!             │
-└─────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                         AZURE DEPLOYMENT CENTER                                 │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   Select Model to Deploy:                                                       │
+│                                                                                 │
+│   ┌─────────────────────────────┐    ┌─────────────────────────────┐            │
+│   │  🔥 PyTorch                 │    │  🟠 TensorFlow              │            │
+│   │                             │    │                             │            │
+│   │  File: simple_nn.pth        │    │  File: simple_nn.h5         │            │
+│   │  Dataset: Fashion MNIST     │    │  Dataset: Fashion MNIST     │            │
+│   │  Optimizer: Adam            │    │  Optimizer: Adam            │            │
+│   │  Epochs: 10                 │    │  Epochs: 10                 │            │
+│   │                             │    │                             │            │
+│   │  [ Register to Azure ]      │    │  [ Register to Azure ]      │            │
+│   └─────────────────────────────┘    └─────────────────────────────┘            │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
-
-*Same cloud workflow regardless of framework*
 
 </td>
 </tr>
@@ -214,30 +258,33 @@ Interactive preview of the **MNIST dataset** — shared by both frameworks.
 
 ## 🎓 What This Project Is About
 
-This project is a **masterclass in MLOps and Framework Interoperability**. It demonstrates how to build production-grade deep learning workflows regardless of the underlying library.
+This project is a **masterclass in MLOps and Framework Interoperability**, demonstrating how to handle **multiple data sources** and **training strategies** in a single interface.
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                       FRAMEWORK INTEROPERABILITY                                │
+│                      THE CONFIGURABILITY MATRIX                                 │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   THE OLD WAY                              THE DUAL-ENGINE WAY                  │
-│   ───────────                              ───────────────────                  │
+│                    FRAMEWORK        DATASET          OPTIMIZER                  │
+│                    ─────────        ───────          ─────────                  │
 │                                                                                 │
-│   Pick PyTorch OR TensorFlow               Use BOTH in parallel                 │
-│        │                                            │                           │
-│        ▼                                            ▼                           │
-│   Learn one paradigm only                  Compare paradigms live               │
-│        │                                            │                           │
-│        ▼                                            ▼                           │
-│   Separate deployment scripts              Unified Azure workflow               │
-│        │                                            │                           │
-│        ▼                                            ▼                           │
-│   Framework lock-in                        Framework agnostic                   │
+│   Experiment 1:    PyTorch    ×    MNIST      ×       SGD                       │
+│   Experiment 2:    PyTorch    ×    MNIST      ×       Adam                      │
+│   Experiment 3:    PyTorch    ×    Fashion    ×       SGD                       │
+│   Experiment 4:    PyTorch    ×    Fashion    ×       Adam                      │
+│   Experiment 5:    TensorFlow ×    MNIST      ×       SGD                       │
+│   Experiment 6:    TensorFlow ×    MNIST      ×       Adam                      │
+│   Experiment 7:    TensorFlow ×    Fashion    ×       SGD                       │
+│   Experiment 8:    TensorFlow ×    Fashion    ×       Adam                      │
 │                                                                                 │
-│   😵 "Which do I choose?"                 😊 "I understand both!"               │
+│   ═══════════════════════════════════════════════════════════════════════════   │
+│                                                                                 │
+│                    2 Frameworks × 2 Datasets × 2 Optimizers                     │
+│                              = 8 COMBINATIONS                                   │
+│                                                                                 │
+│              All configurable from a single sidebar. No code changes.           │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -248,16 +295,16 @@ This project is a **masterclass in MLOps and Framework Interoperability**. It de
 
 | Skill | What You'll Learn |
 |:------|:------------------|
-| **PyTorch Fundamentals** | Custom training loops, `nn.Module`, `autograd` |
-| **TensorFlow/Keras** | `model.fit()`, custom callbacks, `Sequential` API |
-| **MLOps** | Model versioning, cloud deployment, artifact management |
-| **Comparative Analysis** | Same task, different approaches, same result |
+| **Framework Flexibility** | Same task in PyTorch vs TensorFlow |
+| **Dataset Handling** | Dynamic data loading based on user selection |
+| **Optimizer Comparison** | SGD vs Adam convergence behavior |
+| **MLOps** | Model versioning and cloud deployment |
 
 ---
 
 ## ⚡ What It Does
 
-The Dual-Engine Edition performs four core operations:
+The Dual-Engine Edition v2.1 performs four core operations:
 
 <div align="center">
 
@@ -269,37 +316,31 @@ The Dual-Engine Edition performs four core operations:
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
 │   │  1️⃣ IMPLEMENT IDENTICAL NETWORKS                                        │   │
 │   │                                                                         │   │
-│   │  The EXACT SAME Feedforward Neural Network in both frameworks:          │   │
-│   │                                                                         │   │
-│   │  PyTorch:               TensorFlow:                                     │   │
-│   │  class SimpleNN         tf.keras.Sequential([                           │   │
-│   │    fc1: 784 → 128         Dense(128, 'relu'),                           │   │
-│   │    fc2: 128 → 10          Dense(10)                                     │   │
-│   │                         ])                                              │   │
+│   │  Same Feedforward Network in both PyTorch and TensorFlow                │   │
+│   │  → Fair comparison, only framework differs                              │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
 │                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
 │   │  2️⃣ TRAIN LIVE IN BROWSER                                               │   │
 │   │                                                                         │   │
-│   │  Both models train inside Streamlit with real-time loss visualization   │   │
-│   │                                                                         │   │
-│   │  PyTorch: Teal curve 🟢                                                 │   │
-│   │  TensorFlow: Orange curve 🟠                                            │   │
+│   │  10-epoch training with real-time loss curves                           │   │
+│   │  → Watch convergence happen before your eyes                            │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
 │                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  3️⃣ VISUALIZE ARCHITECTURAL DIFFERENCES                                 │   │
+│   │  3️⃣ DYNAMICALLY LOAD DIFFERENT DATASETS                                 │   │
 │   │                                                                         │   │
-│   │  Imperative (PyTorch)          vs          Symbolic (TensorFlow)        │   │
-│   │  "Define-by-Run"                           "Define-then-Run"            │   │
+│   │  MNIST (Digits 0-9)         vs         Fashion MNIST (Clothing)         │   │
+│   │  ┌───────────────────┐                 ┌───────────────────┐            │   │
+│   │  │ "Is this a 7?"    │                 │ "Is this a shoe?" │            │   │
+│   │  └───────────────────┘                 └───────────────────┘            │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
 │                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │  4️⃣ DEPLOY TO AZURE CLOUD                                               │   │
+│   │  4️⃣ DEPLOY TO AZURE                                                     │   │
 │   │                                                                         │   │
-│   │  Upload trained artifacts to Azure ML Registry:                         │   │
-│   │  • PyTorch: models/simple_nn.pth                                        │   │
-│   │  • TensorFlow: models/simple_nn.h5                                      │   │
+│   │  Upload .pth or .h5 artifacts to Azure ML Model Registry                │   │
+│   │  → Production-ready model hosting                                       │   │
 │   └─────────────────────────────────────────────────────────────────────────┘   │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
@@ -311,156 +352,168 @@ The Dual-Engine Edition performs four core operations:
 
 ## 🧮 What Is The Logic
 
-Each framework uses a fundamentally different training paradigm:
+### Dataset Loading
 
-### 🔥 PyTorch Engine — Imperative / Object-Oriented
-
-Uses a **custom training loop** with manual gradient zeroing and stepping.
+Uses `torchvision` or `tf.keras.datasets` to load either **MNIST** or **Fashion MNIST** based on user selection.
 
 ```python
-# PyTorch: Full control over every step
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.fc1 = nn.Linear(784, 128)
-        self.fc2 = nn.Linear(128, 10)
-    
-    def forward(self, x):
-        x = F.relu(self.fc1(x))
-        return self.fc2(x)
+# PyTorch Dataset Loading
+if dataset_choice == "MNIST (Digits)":
+    train_data = torchvision.datasets.MNIST(root='./data', train=True, download=True)
+elif dataset_choice == "Fashion MNIST":
+    train_data = torchvision.datasets.FashionMNIST(root='./data', train=True, download=True)
 
-# Manual training loop
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
-for epoch in range(epochs):
-    optimizer.zero_grad()           # ← Manual gradient reset
-    outputs = model(x_batch)
-    loss = criterion(outputs, y_batch)
-    loss.backward()                 # ← Manual backprop
-    optimizer.step()                # ← Manual weight update
+# TensorFlow Dataset Loading
+if dataset_choice == "MNIST (Digits)":
+    (x_train, y_train), _ = tf.keras.datasets.mnist.load_data()
+elif dataset_choice == "Fashion MNIST":
+    (x_train, y_train), _ = tf.keras.datasets.fashion_mnist.load_data()
 ```
 
-<div align="center">
+### Fashion MNIST Classes
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         PYTORCH TRAINING FLOW                                   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│   ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐ │
-│   │  zero_   │───►│  forward │───►│  loss    │───►│  back    │───►│  step    │ │
-│   │  grad()  │    │   pass   │    │  compute │    │  ward()  │    │   ()     │ │
-│   └──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘ │
-│                                                                                 │
-│   YOU control every step — maximum flexibility, maximum responsibility          │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-</div>
+| Label | Class Name | Emoji |
+|:-----:|:-----------|:-----:|
+| 0 | T-shirt/Top | 👕 |
+| 1 | Trouser | 👖 |
+| 2 | Pullover | 🧥 |
+| 3 | Dress | 👗 |
+| 4 | Coat | 🧥 |
+| 5 | Sandal | 👡 |
+| 6 | Shirt | 👔 |
+| 7 | Sneaker | 👟 |
+| 8 | Bag | 👜 |
+| 9 | Ankle Boot | 🥾 |
 
 ---
 
-### 🟠 TensorFlow Engine — Declarative / Keras API
+### Optimizer Selection
 
-Uses the **`model.fit()` API** hooked into a **custom StreamlitCallback** to update the UI in real-time.
+Dynamically switches between optimizers based on sidebar selection.
+
+<table>
+<tr>
+<th>PyTorch</th>
+<th>TensorFlow</th>
+</tr>
+<tr>
+<td>
 
 ```python
-# TensorFlow: Declarative and concise
-model = tf.keras.Sequential([
-    tf.keras.layers.Flatten(input_shape=(28, 28)),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(10)
-])
-
-model.compile(
-    optimizer='sgd',
-    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-)
-
-# Custom callback for Streamlit UI updates
-class StreamlitCallback(tf.keras.callbacks.Callback):
-    def on_epoch_end(self, epoch, logs=None):
-        loss_history.append(logs['loss'])
-        progress_bar.progress((epoch + 1) / epochs)
-
-# One-liner training
-model.fit(x_train, y_train, epochs=epochs, callbacks=[StreamlitCallback()])
+if optimizer_choice == "SGD":
+    optimizer = torch.optim.SGD(
+        model.parameters(), 
+        lr=learning_rate
+    )
+elif optimizer_choice == "Adam":
+    optimizer = torch.optim.Adam(
+        model.parameters(), 
+        lr=learning_rate
+    )
 ```
 
-<div align="center">
+</td>
+<td>
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                       TENSORFLOW TRAINING FLOW                                  │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│   ┌──────────────────────────────────────────────────────────────────────────┐  │
-│   │                           model.fit()                                    │  │
-│   │                                                                          │  │
-│   │   Internally handles:  forward → loss → backward → update                │  │
-│   │                                                                          │  │
-│   │   You hook in via:     ┌─────────────────────┐                           │  │
-│   │                        │ StreamlitCallback   │                           │  │
-│   │                        │ on_epoch_end()      │                           │  │
-│   │                        └─────────────────────┘                           │  │
-│   └──────────────────────────────────────────────────────────────────────────┘  │
-│                                                                                 │
-│   KERAS handles the loop — you configure and observe                            │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
+```python
+if optimizer_choice == "SGD":
+    model.compile(
+        optimizer='sgd',
+        loss=loss_fn
+    )
+elif optimizer_choice == "Adam":
+    model.compile(
+        optimizer='adam',
+        loss=loss_fn
+    )
 ```
 
-</div>
+</td>
+</tr>
+</table>
+
+### Optimizer Comparison
+
+| Property | SGD | Adam |
+|:---------|:----|:-----|
+| **Speed** | Slower convergence | Faster convergence |
+| **Stability** | More stable | Can overshoot |
+| **Memory** | Low | Higher (stores momentum) |
+| **Best For** | Generalization | Fast prototyping |
 
 ---
 
-### ☁️ Azure Integration
+### Training Logic
 
-Uses `azureml-core` to authenticate and register model files to the cloud registry.
+**PyTorch:** Uses a **manual training loop** with `optimizer.step()`.
 
-```python
-from azureml.core import Workspace, Model
+**TensorFlow:** Uses **`model.fit()`** with a custom Streamlit callback for UI updates.
 
-ws = Workspace.from_config()
-
-# Register PyTorch model
-Model.register(ws, model_path="models/simple_nn.pth", model_name="pytorch_mnist")
-
-# Register TensorFlow model
-Model.register(ws, model_path="models/simple_nn.h5", model_name="tensorflow_mnist")
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                         TRAINING COMPARISON                                     │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   PYTORCH (Manual Control)              TENSORFLOW (Keras API)                  │
+│   ────────────────────────              ──────────────────────                  │
+│                                                                                 │
+│   for epoch in range(10):               class StreamlitCallback:                │
+│       optimizer.zero_grad()                 def on_epoch_end(self):             │
+│       outputs = model(x)                        update_progress()               │
+│       loss = criterion(outputs, y)                                              │
+│       loss.backward()                   model.fit(x, y,                         │
+│       optimizer.step()                      epochs=10,                          │
+│       update_ui()                           callbacks=[StreamlitCallback()])    │
+│                                                                                 │
+│   YOU control the loop                  KERAS controls the loop                 │
+│   YOU update the UI manually            YOU hook via callbacks                  │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## ⚙️ How Does It Work
 
-The user navigates through **5 tabs** in the Streamlit UI:
+The user navigates through **5 tabs** with configuration in the **Sidebar**:
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           5-TAB WORKFLOW                                        │
+│                           5-TAB + SIDEBAR WORKFLOW                              │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   ┌───────────┬───────────┬───────────┬───────────┬───────────┐                 │
-│   │ 📊 Tab 1  │ 🆚 Tab 2  │ 🔥 Tab 3  │ 🟠 Tab 4  │ ☁️ Tab 5  │                 │
-│   │   Data    │   Code    │  PyTorch  │TensorFlow │   Azure   │                 │
-│   │ Inspector │   Diff    │   Lab     │   Lab     │  Deploy   │                 │
-│   └─────┬─────┴─────┬─────┴─────┬─────┴─────┬─────┴─────┬─────┘                 │
-│         │           │           │           │           │                       │
-│         ▼           ▼           ▼           ▼           ▼                       │
-│   ┌───────────┐┌───────────┐┌───────────┐┌───────────┐┌───────────┐             │
-│   │  View     ││  Compare  ││  Manual   ││  Keras    ││  Select   │             │
-│   │  MNIST    ││  PyTorch  ││  training ││  model.   ││  .pth or  │             │
-│   │  samples  ││  vs TF    ││  loop     ││  fit()    ││  .h5 file │             │
-│   │           ││  code     ││  with     ││  with     ││           │             │
-│   │           ││  side by  ││  teal     ││  orange   ││  Upload   │             │
-│   │           ││  side     ││  loss     ││  loss     ││  to Azure │             │
-│   │           ││           ││  curve    ││  curve    ││           │             │
-│   └───────────┘└───────────┘└───────────┘└───────────┘└───────────┘             │
+│   ┌─────────────────┐                                                           │
+│   │  📊 SIDEBAR     │                                                           │
+│   │                 │                                                           │
+│   │  Dataset:       │                                                           │
+│   │  [Digits ▼]     │──┐                                                        │
+│   │  [Fashion ▼]    │  │                                                        │
+│   │                 │  │                                                        │
+│   │  Optimizer:     │  │ Applies to ALL tabs                                    │
+│   │  [SGD ▼]        │  │                                                        │
+│   │  [Adam ▼]       │  │                                                        │
+│   │                 │  │                                                        │
+│   │  Epochs: [10]   │  │                                                        │
+│   └─────────────────┘  │                                                        │
+│                        │                                                        │
+│   ─────────────────────┴────────────────────────────────────────────────────    │
 │                                                                                 │
-│        EXPLORE → UNDERSTAND → TRAIN PYTORCH → TRAIN TF → DEPLOY                 │
+│   ┌─────────┬─────────┬─────────┬─────────┬─────────┐                           │
+│   │📊 Tab 1 │🆚 Tab 2 │🔥 Tab 3 │🟠 Tab 4 │☁️ Tab 5 │                           │
+│   │  Data   │  Code   │ PyTorch │  Tensor │  Azure  │                           │
+│   │Inspector│  Diff   │   Lab   │ FlowLab │ Deploy  │                           │
+│   └────┬────┴────┬────┴────┬────┴────┬────┴────┬────┘                           │
+│        │         │         │         │         │                                │
+│        ▼         ▼         ▼         ▼         ▼                                │
+│   ┌─────────┐┌─────────┐┌─────────┐┌─────────┐┌─────────┐                       │
+│   │ Shows   ││ Compare ││ Train   ││ Train   ││ Upload  │                       │
+│   │ 👕 or 5 ││ PyTorch ││ 10 eps  ││ 10 eps  ││ .pth or │                       │
+│   │ based   ││ vs TF   ││ with    ││ with    ││ .h5 to  │                       │
+│   │ on      ││ code    ││ SGD/Adam││ SGD/Adam││ Azure   │                       │
+│   │ dataset ││         ││ 🟢 Teal ││ 🟠Orange││         │                       │
+│   └─────────┘└─────────┘└─────────┘└─────────┘└─────────┘                       │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -469,13 +522,13 @@ The user navigates through **5 tabs** in the Streamlit UI:
 
 ### Tab Responsibilities
 
-| Tab | Name | Purpose |
-|:---:|:-----|:--------|
-| 1 | **Data Inspector** | View random MNIST samples, understand the input |
-| 2 | **Code Diff** | Compare PyTorch vs TensorFlow implementations |
-| 3 | **PyTorch Lab** | Train with manual loop, see teal loss curve |
-| 4 | **TensorFlow Lab** | Train with Keras API, see orange loss curve |
-| 5 | **Azure Deployment** | Upload `.pth` or `.h5` to cloud registry |
+| Tab | Name | What It Shows |
+|:---:|:-----|:--------------|
+| 1 | **Data Inspector** | Sample images — digits OR clothing items |
+| 2 | **Code Diff** | Side-by-side PyTorch vs TensorFlow code |
+| 3 | **PyTorch Lab** | 10-epoch training with teal 🟢 loss curve |
+| 4 | **TensorFlow Lab** | 10-epoch training with orange 🟠 loss curve |
+| 5 | **Azure Deployment** | Upload trained `.pth` or `.h5` to cloud |
 
 ---
 
@@ -485,30 +538,22 @@ The user navigates through **5 tabs** in the Streamlit UI:
 
 | Requirement | Specification |
 |:------------|:--------------|
-| **Python** | 3.9 or 3.10 |
+| **Python** | 3.10 or higher |
 | **OS** | Windows, macOS, or Linux |
 | **RAM** | 4GB minimum (8GB recommended) |
-| **Internet** | Required (MNIST download + Azure) |
+| **Internet** | Required (dataset download + Azure) |
 
 ### Library Requirements
 
 | Library | Purpose |
 |:--------|:--------|
-| `torch` | PyTorch deep learning framework |
-| `torchvision` | MNIST dataset for PyTorch |
-| `tensorflow` | TensorFlow deep learning framework |
+| `torch` | PyTorch deep learning |
+| `torchvision` | MNIST & Fashion MNIST (PyTorch) |
+| `tensorflow` | TensorFlow/Keras deep learning |
 | `streamlit` | Interactive dashboard |
 | `azureml-core` | Azure ML SDK |
-| `matplotlib` | Visualization |
+| `matplotlib` | Loss curve visualization |
 | `numpy`, `pandas` | Data handling |
-
-### Cloud Requirements (Optional)
-
-| Requirement | Description |
-|:------------|:------------|
-| **Azure Subscription** | Active Microsoft Azure account |
-| **Azure ML Workspace** | Pre-configured workspace |
-| **Permissions** | Contributor role on workspace |
 
 ---
 
@@ -518,17 +563,22 @@ The user navigates through **5 tabs** in the Streamlit UI:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          SYSTEM ARCHITECTURE                                    │
+│                          SYSTEM ARCHITECTURE v2.1                               │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
 │   ┌─────────────────────────────────────────────────────────────────────────┐   │
-│   │                      STREAMLIT FRONTEND                                 │   │
-│   │                         (app.py)                                        │   │
+│   │                      STREAMLIT FRONTEND (app.py)                        │   │
 │   │                                                                         │   │
-│   │   ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐          │   │
-│   │   │  Tab 1  │ │  Tab 2  │ │  Tab 3  │ │  Tab 4  │ │  Tab 5  │          │   │
-│   │   │  Data   │ │  Diff   │ │ PyTorch │ │   TF    │ │  Azure  │          │   │
-│   │   └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘          │   │
+│   │   ┌─────────────────────────────────────────────────────────────────┐   │   │
+│   │   │                         SIDEBAR                                 │   │   │
+│   │   │   Dataset: [MNIST ▼] [Fashion ▼]                                │   │   │
+│   │   │   Optimizer: [SGD ▼] [Adam ▼]                                   │   │   │
+│   │   │   Epochs: [10]                                                  │   │   │
+│   │   └─────────────────────────────────────────────────────────────────┘   │   │
+│   │                                                                         │   │
+│   │   ┌───────┐ ┌───────┐ ┌───────┐ ┌───────┐ ┌───────┐                    │   │
+│   │   │ Tab 1 │ │ Tab 2 │ │ Tab 3 │ │ Tab 4 │ │ Tab 5 │                    │   │
+│   │   └───────┘ └───────┘ └───────┘ └───────┘ └───────┘                    │   │
 │   └───────────────────────────────┬─────────────────────────────────────────┘   │
 │                                   │                                             │
 │               ┌───────────────────┴───────────────────┐                         │
@@ -537,15 +587,17 @@ The user navigates through **5 tabs** in the Streamlit UI:
 │   ┌───────────────────────────┐       ┌───────────────────────────┐             │
 │   │       model.py            │       │       model_tf.py         │             │
 │   │                           │       │                           │             │
-│   │  🔥 PyTorch Class         │       │  🟠 TensorFlow Function   │             │
+│   │  🔥 PyTorch Engine        │       │  🟠 TensorFlow Engine     │             │
 │   │                           │       │                           │             │
-│   │  class SimpleNN:          │       │  def create_model():      │             │
-│   │    nn.Module              │       │    keras.Sequential       │             │
-│   │    forward()              │       │    compile()              │             │
+│   │  • SimpleNN class         │       │  • create_model()         │             │
+│   │  • torch.optim.SGD        │       │  • optimizer='sgd'        │             │
+│   │  • torch.optim.Adam ⚡    │       │  • optimizer='adam' ⚡    │             │
+│   │  • Manual training loop   │       │  • model.fit() + callback │             │
 │   │                           │       │                           │             │
-│   │  Training:                │       │  Training:                │             │
-│   │    Manual loop            │       │    model.fit()            │             │
-│   │    optimizer.step()       │       │    callbacks              │             │
+│   │  Datasets:                │       │  Datasets:                │             │
+│   │  • torchvision.MNIST      │       │  • keras.datasets.mnist   │             │
+│   │  • torchvision.FashionMNIST│      │  • keras.datasets.        │             │
+│   │                           │       │      fashion_mnist        │             │
 │   │                           │       │                           │             │
 │   │  Output: simple_nn.pth    │       │  Output: simple_nn.h5     │             │
 │   └─────────────┬─────────────┘       └─────────────┬─────────────┘             │
@@ -557,19 +609,8 @@ The user navigates through **5 tabs** in the Streamlit UI:
 │                    │     azure_manager.py      │                                │
 │                    │                           │                                │
 │                    │  ☁️ Azure SDK Wrapper     │                                │
-│                    │                           │                                │
-│                    │  • Authentication         │                                │
 │                    │  • Model.register()       │                                │
 │                    │  • Supports .pth & .h5    │                                │
-│                    └─────────────┬─────────────┘                                │
-│                                  │                                              │
-│                                  ▼                                              │
-│                    ┌───────────────────────────┐                                │
-│                    │  ☁️ AZURE ML REGISTRY     │                                │
-│                    │                           │                                │
-│                    │  Stores both:             │                                │
-│                    │  • pytorch_mnist (.pth)   │                                │
-│                    │  • tensorflow_mnist (.h5) │                                │
 │                    └───────────────────────────┘                                │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
@@ -577,77 +618,36 @@ The user navigates through **5 tabs** in the Streamlit UI:
 
 </div>
 
-### Component Responsibilities
-
-| Component | File | Responsibility |
-|:----------|:-----|:---------------|
-| **Frontend** | `app.py` | Streamlit UI, tab navigation, visualization |
-| **PyTorch Model** | `model.py` | `nn.Module` class, manual training loop |
-| **TensorFlow Model** | `model_tf.py` | Keras Sequential, `model.fit()` with callbacks |
-| **Cloud Manager** | `azure_manager.py` | Azure authentication, model upload |
-
 ---
 
 ## 🤖 Model Specifications
 
-### Identical Architecture
-
-Both frameworks implement the **exact same network** for fair comparison:
-
-<div align="center">
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                    IDENTICAL FEEDFORWARD NETWORK                                │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│   INPUT                    HIDDEN                    OUTPUT                     │
-│   ─────                    ──────                    ──────                     │
-│                                                                                 │
-│   28×28 Image              128 Units                 10 Classes                 │
-│   (Flattened)              (ReLU)                    (Logits)                   │
-│                                                                                 │
-│   ┌─────────┐            ┌─────────┐              ┌─────────┐                   │
-│   │   784   │───────────►│   128   │─────────────►│   10    │                   │
-│   │ neurons │  Linear    │ neurons │   Linear     │ neurons │                   │
-│   └─────────┘            └─────────┘              └─────────┘                   │
-│                             ReLU                                                │
-│                                                                                 │
-│   ═══════════════════════════════════════════════════════════════════════════   │
-│                                                                                 │
-│   PYTORCH SYNTAX                       TENSORFLOW SYNTAX                        │
-│   ──────────────                       ─────────────────                        │
-│                                                                                 │
-│   self.fc1 = nn.Linear(784, 128)       Dense(128, activation='relu',           │
-│   self.fc2 = nn.Linear(128, 10)              input_shape=(784,))               │
-│   x = F.relu(self.fc1(x))              Dense(10)                               │
-│   x = self.fc2(x)                                                              │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
-### Specifications Table
+### Architecture
 
 | Property | Specification |
 |:---------|:--------------|
-| **Architecture** | Feedforward Neural Network (FNN) |
-| **Input** | 784 dimensions (flattened 28×28 image) |
-| **Hidden Layers** | 1 layer with **128 units**, ReLU activation |
-| **Output** | 10 units (Linear logits) — digits 0-9 |
-| **Parameters** | ~101,770 (identical in both frameworks) |
+| **Type** | Feedforward Neural Network |
+| **Input** | 784 dimensions (flattened 28×28) |
+| **Hidden** | 128 units, ReLU activation |
+| **Output** | 10 units (logits) |
+| **Parameters** | ~101,770 |
 
-### Framework-Specific Implementation
+### Dataset Compatibility
 
-| Aspect | PyTorch | TensorFlow |
-|:-------|:--------|:-----------|
-| **Style** | `nn.Module` class | `keras.Sequential` list |
-| **Definition** | Object-Oriented | Declarative/Functional |
-| **Training** | Manual loop | `model.fit()` |
-| **Save Format** | `.pth` (state dict) | `.h5` (HDF5) |
-| **Optimizer** | `torch.optim.SGD` | `tf.keras.optimizers.SGD` |
-| **Loss** | `nn.CrossEntropyLoss()` | `SparseCategoricalCrossentropy` |
+| Dataset | Classes | Examples |
+|:--------|:-------:|:---------|
+| **MNIST** | 10 | Digits 0-9 |
+| **Fashion MNIST** | 10 | Clothing items (T-shirt, Trouser, etc.) |
+
+Both datasets have **identical dimensions** (28×28 grayscale), making them interchangeable without architecture changes.
+
+### Training Configuration
+
+| Property | v2.0 | v2.1 |
+|:---------|:----:|:----:|
+| **Default Epochs** | 5 | **10** |
+| **Optimizers** | SGD | **SGD + Adam** |
+| **Learning Rate** | Configurable | Configurable |
 
 ---
 
@@ -660,11 +660,10 @@ Both frameworks implement the **exact same network** for fair comparison:
 | 🐍 | **Python** | 3.10+ | Core runtime |
 | 🔥 | **PyTorch** | Latest | Deep learning (Engine 1) |
 | 🟠 | **TensorFlow** | 2.x | Deep learning (Engine 2) |
-| 🖼️ | **Torchvision** | Latest | MNIST dataset (PyTorch) |
 | ☁️ | **Azure ML SDK** | azureml-core | Cloud deployment |
 | 🖥️ | **Streamlit** | Latest | Interactive dashboard |
+| 📊 | **Matplotlib** | Latest | Loss visualization |
 | 🔢 | **NumPy** | Latest | Array operations |
-| 📊 | **Matplotlib** | Latest | Loss curve visualization |
 | 📋 | **Pandas** | Latest | Data handling |
 
 </div>
@@ -699,13 +698,13 @@ pip install streamlit torch torchvision azureml-core matplotlib numpy pandas ten
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/WSalim2024/Azure-Neural-Net-Studio-Dual-Engine.git
+git clone https://github.com/WSalim2024/Azure-Neural-Net-Studio-v2.1.git
 ```
 
 ### Step 2: Navigate to Project Directory
 
 ```bash
-cd Azure-Neural-Net-Studio-Dual-Engine
+cd Azure-Neural-Net-Studio-v2.1
 ```
 
 ### Step 3: Create Virtual Environment
@@ -745,20 +744,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Step 6: Verify Installation
-
-```bash
-python -c "
-import torch
-import tensorflow as tf
-import streamlit
-
-print('✅ Dual-Engine Ready!')
-print(f'   PyTorch: {torch.__version__}')
-print(f'   TensorFlow: {tf.__version__}')
-"
-```
-
 ---
 
 ## ▶️ Launching the Cockpit
@@ -773,14 +758,13 @@ streamlit run app.py
 
 ```
 Local URL: http://localhost:8501
-Network URL: http://192.168.x.x:8501
 ```
 
 ---
 
 ## 📖 User Guide
 
-### Recommended Workflow
+### Recommended Workflow: Fashion MNIST + Adam
 
 <div align="center">
 
@@ -789,57 +773,59 @@ Network URL: http://192.168.x.x:8501
 │                           USER WORKFLOW                                         │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   STEP 1: COMPARE                                                               │
+│   STEP 1: CONFIGURE                                                             │
+│   ─────────────────                                                             │
+│                                                                                 │
+│   In the Sidebar:                                                               │
+│   • Select "Fashion MNIST" 👗                                                   │
+│   • Select "Adam" ⚡                                                            │
+│   • Leave Epochs at 10                                                          │
+│                                                                                 │
+│   ─────────────────────────────────────────────────────────────────────────     │
+│                                                                                 │
+│   STEP 2: EXPLORE                                                               │
 │   ───────────────                                                               │
 │                                                                                 │
-│   Go to Tab 2 (Code Diff) to read the architectural differences                 │
-│   between PyTorch and TensorFlow implementations.                               │
+│   Go to Tab 1 (Data Inspector)                                                  │
+│   • See clothing images: T-shirts 👕, Sneakers 👟, Bags 👜                      │
+│   • Confirm Fashion MNIST is loaded                                             │
 │                                                                                 │
 │   ─────────────────────────────────────────────────────────────────────────     │
 │                                                                                 │
-│   STEP 2: TRAIN PYTORCH                                                         │
-│   ─────────────────────                                                         │
+│   STEP 3: TRAIN                                                                 │
+│   ─────────────                                                                 │
 │                                                                                 │
-│   • Go to Tab 3 (PyTorch Lab)                                                   │
-│   • Set epochs and learning rate                                                │
-│   • Click "Start Training"                                                      │
-│   • Watch the TEAL 🟢 loss curve descend                                        │
-│   • Model saves to: models/simple_nn.pth                                        │
+│   Tab 3 (PyTorch): Click "Start Training"                                       │
+│   • Watch 10 epochs with teal 🟢 loss curve                                     │
+│   • Adam converges faster than SGD!                                             │
 │                                                                                 │
-│   ─────────────────────────────────────────────────────────────────────────     │
-│                                                                                 │
-│   STEP 3: TRAIN TENSORFLOW                                                      │
-│   ────────────────────────                                                      │
-│                                                                                 │
-│   • Go to Tab 4 (TensorFlow Lab)                                                │
-│   • Use same epochs and learning rate for fair comparison                       │
-│   • Click "Start Training"                                                      │
-│   • Watch the ORANGE 🟠 loss curve descend                                      │
-│   • Model saves to: models/simple_nn.h5                                         │
+│   Tab 4 (TensorFlow): Click "Start Training"                                    │
+│   • Watch 10 epochs with orange 🟠 loss curve                                   │
+│   • Compare convergence patterns                                                │
 │                                                                                 │
 │   ─────────────────────────────────────────────────────────────────────────     │
 │                                                                                 │
 │   STEP 4: DEPLOY                                                                │
 │   ──────────────                                                                │
 │                                                                                 │
-│   • Go to Tab 5 (Azure Deployment)                                              │
-│   • Select which model file to upload:                                          │
-│     ○ PyTorch: simple_nn.pth                                                    │
-│     ○ TensorFlow: simple_nn.h5                                                  │
+│   Go to Tab 5 (Azure Deployment)                                                │
+│   • Select your preferred model (.pth or .h5)                                   │
 │   • Click "Register to Azure"                                                   │
-│   • Verify upload success                                                       │
+│   • Verify upload success ✅                                                    │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
 
-### Color Legend
+### Experiment Ideas
 
-| Color | Framework | Training Style |
-|:------|:----------|:---------------|
-| 🟢 **Teal** | PyTorch | Manual loop with `optimizer.step()` |
-| 🟠 **Orange** | TensorFlow | Keras `model.fit()` with callbacks |
+| Experiment | Config | What to Observe |
+|:-----------|:-------|:----------------|
+| **SGD vs Adam** | Same dataset, different optimizers | Adam converges faster |
+| **Digits vs Fashion** | Same optimizer, different datasets | Fashion is harder to classify |
+| **PyTorch vs TensorFlow** | Same settings for both | Similar results, different code |
+| **Low vs High Epochs** | 5 vs 10 epochs | More epochs = lower loss |
 
 ---
 
@@ -847,15 +833,10 @@ Network URL: http://192.168.x.x:8501
 
 | Limitation | Description | Reason |
 |:-----------|:------------|:-------|
-| **Compute** | Runs on local CPU only | Optimized for small datasets like MNIST |
-| **Session** | Data not persisted on refresh | Except for saved model files (.pth, .h5) |
-| **TF Version** | Designed for TensorFlow 2.x | Uses Keras API extensively |
-| **Dataset** | Hardcoded to MNIST | Demonstration purposes |
-| **Azure Auth** | Interactive authentication | May require browser popup |
-
-### Framework Compatibility Note
-
-> ⚠️ **TensorFlow 2.x Required:** This project uses the `tf.keras` API. TensorFlow 1.x is not supported.
+| **Compute** | Runs on local CPU only | Optimized for small datasets |
+| **Persistence** | Session resets on refresh | Saved models persist on disk |
+| **TensorFlow** | Requires version 2.x+ | Uses Keras API |
+| **Datasets** | MNIST and Fashion MNIST only | Fixed input shape (28×28) |
 
 ---
 
@@ -871,12 +852,9 @@ Network URL: http://192.168.x.x:8501
 
 </div>
 
-This is an **educational tool** demonstrating PyTorch + TensorFlow interoperability with Azure ML.
+This is an **educational tool** demonstrating framework interoperability and MLOps practices.
 
-⚠️ **Azure Usage Warning:**
-- Azure services may incur costs depending on your subscription plan
-- The author is **not responsible** for any cloud charges
-- Monitor your usage in the Azure Portal
+⚠️ **Azure costs are the user's responsibility.**
 
 ---
 
@@ -895,17 +873,20 @@ This is an **educational tool** demonstrating PyTorch + TensorFlow interoperabil
 
 ---
 
-**Built with 🔥 PyTorch, 🟠 TensorFlow, ☁️ Azure, and 🆚 Competitive Spirit**
+**Built with 🔥 PyTorch, 🟠 TensorFlow, 👗 Fashion, and ⚡ Adam**
 
-*Azure Neural Net Studio: Dual-Engine Edition — Why Choose When You Can Compare?*
+*Azure Neural Net Studio v2.1 — Now with More Choices*
 
 ---
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
-║   "The best framework is the one you understand.                              ║
-║    With this studio, you'll understand both."                                 ║
+║   "Why choose one framework when you can master both?                         ║
+║    Why use one dataset when you can compare two?                              ║
+║    Why stick with SGD when Adam exists?"                                      ║
+║                                                                               ║
+║                        — v2.1: The Update That Asked "Why Not?"               ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
