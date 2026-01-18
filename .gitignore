@@ -1,43 +1,40 @@
-# Byte-compiled / optimized / DLL files
+# --- Python Standard ---
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging
+# --- Virtual Environments ---
+# It is critical to ignore these to keep the repo light
+env/
+venv/
+.venv/
+.env
+
+# --- IDE Settings ---
+# PyCharm
+.idea/
+# VS Code
+.vscode/
+
+# --- Streamlit ---
+.streamlit/
+
+# --- Azure ML ---
+.azureml/
+amt-code/
+amltmp/
+
+# --- Project Artifacts (Generated Files) ---
+# Ignore the models folder so you don't push large binary files to GitHub.
+# (If you WANT to version control your trained models, remove these lines)
+models/
+*.pth
+*.h5
+
+# --- Distribution / Packaging ---
 build/
 dist/
 *.egg-info/
 
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-htmlcov/
-.coverage
-.cache
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-
-# PyCharm / IDE settings
-.idea/
-.vscode/
-
-# Streamlit
-.streamlit/
-
-# Local Model files (Optional: Keep commented if you WANT to version control your models)
-# models/
-# *.pth
-# *.h5
+# --- Mac OS Junk ---
+.DS_Store
