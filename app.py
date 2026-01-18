@@ -26,7 +26,7 @@ class StreamlitTFCallback(tf.keras.callbacks.Callback):
         self.progress_bar = progress_bar
         self.status_text = status_text
         self.chart_placeholder = chart_placeholder
-        self.total_epochs = total_epochs  # Added to track total epochs dynamically
+        self.total_epochs = total_epochs
         self.loss_history = []
 
     def on_epoch_end(self, epoch, logs=None):
@@ -160,7 +160,7 @@ with tabs[2]:
     st.header("🔥 PyTorch Training Loop")
 
     if st.button("▶️ Start PyTorch Training"):
-        # 0. Set Hyperparameters (Assignment Requirement)
+        # 0. Set Hyperparameters
         EPOCHS = 10
         BATCH_SIZE = 32
 
@@ -225,7 +225,6 @@ with tabs[3]:
     if st.button("▶️ Start TensorFlow Training"):
         # 0. Set Hyperparameters
         EPOCHS = 10
-        # Batch size defaults to 32 in model.fit(), so we are good.
 
         with st.spinner(f"Loading {dataset_name}..."):
             # 1. Dynamic Data Loading
@@ -235,13 +234,13 @@ with tabs[3]:
                 mnist = tf.keras.datasets.fashion_mnist
 
             (x_train, y_train), (x_test, y_test) = mnist.load_data()
-            x_train = x_train / 255.0
+            x_train, x_test = x_train / 255.0, x_test / 255.0
 
             # 2. Create Model
             tf_model = create_tf_model()
             loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
-            # 3. Dynamic Optimizer (pass string 'sgd' or 'adam')
+            # 3. Dynamic Optimizer
             tf_model.compile(optimizer=optimizer_name.lower(), loss=loss_fn, metrics=['accuracy'])
 
             # UI Setup
@@ -249,12 +248,27 @@ with tabs[3]:
             tf_status = st.empty()
             tf_chart = st.empty()
 
-            # Custom Callback (Passing EPOCHS now)
+            # Custom Callback
             streamlit_cb = StreamlitTFCallback(tf_progress, tf_status, tf_chart, total_epochs=EPOCHS)
 
             # Train
             tf_model.fit(x_train, y_train, epochs=EPOCHS, callbacks=[streamlit_cb], verbose=0)
 
+            # --- EVALUATION (The Final Step) ---
+            st.divider()
+            with st.spinner("Calculating Test Accuracy..."):
+                test_loss, test_acc = tf_model.evaluate(x_test, y_test, verbose=0)
+
+            col1, col2 = st.columns(2)
+            col1.metric("🏁 Final Test Accuracy", f"{test_acc:.2%}")
+            col2.metric("🏁 Final Test Loss", f"{test_loss:.4f}")
+
+            if test_acc > 0.85:
+                st.success(f"🚀 Success! You achieved {test_acc:.2%} (Target: >85%)")
+            else:
+                st.warning(f"Result: {test_acc:.2%}. Try 'Adam' optimizer to improve!")
+
+            # Save
             if not os.path.exists('models'): os.makedirs('models')
             tf_model.save('models/tf_model.h5')
             st.success(f"✅ TensorFlow Model ({dataset_name}) Saved!")
