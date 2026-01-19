@@ -1,17 +1,17 @@
-# --- Virtual Environments ---
-# Keep your repo light by ignoring the venv
+# --- Virtual Environments (Critical) ---
+# Never upload your virtual environment to GitHub
 venv/
 env/
 .venv/
 .env
 
-# --- Python & Cache ---
+# --- Python Standard ---
 __pycache__/
 *.py[cod]
 *$py.class
 
 # --- IDE Settings ---
-# PyCharm & VS Code settings
+# PyCharm & VS Code configuration files
 .idea/
 .vscode/
 
@@ -24,14 +24,15 @@ __pycache__/
 amt-code/
 amltmp/
 
-# --- Project Data & Artifacts ---
-# Ignore the data folder (CIFAR-10 is large)
+# --- Data & Artifacts ---
+# 1. Ignore dataset downloads (CIFAR-10 is large)
 data/
 
-# Ignore trained models so you don't push binaries
+# 2. Ignore trained model binaries (produced by v4.0 app)
 models/
 *.pth
 *.h5
 
-# --- Mac OS Junk ---
+# --- OS Specific ---
 .DS_Store
+Thumbs.db
