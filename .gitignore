@@ -1,40 +1,37 @@
-# --- Python Standard ---
+# --- Virtual Environments ---
+# Keep your repo light by ignoring the venv
+venv/
+env/
+.venv/
+.env
+
+# --- Python & Cache ---
 __pycache__/
 *.py[cod]
 *$py.class
 
-# --- Virtual Environments ---
-# It is critical to ignore these to keep the repo light
-env/
-venv/
-.venv/
-.env
-
 # --- IDE Settings ---
-# PyCharm
+# PyCharm & VS Code settings
 .idea/
-# VS Code
 .vscode/
 
 # --- Streamlit ---
 .streamlit/
 
-# --- Azure ML ---
+# --- Azure Machine Learning ---
+# Temporary Azure config and log files
 .azureml/
 amt-code/
 amltmp/
 
-# --- Project Artifacts (Generated Files) ---
-# Ignore the models folder so you don't push large binary files to GitHub.
-# (If you WANT to version control your trained models, remove these lines)
+# --- Project Data & Artifacts ---
+# Ignore the data folder (CIFAR-10 is large)
+data/
+
+# Ignore trained models so you don't push binaries
 models/
 *.pth
 *.h5
-
-# --- Distribution / Packaging ---
-build/
-dist/
-*.egg-info/
 
 # --- Mac OS Junk ---
 .DS_Store
