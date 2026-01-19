@@ -1,8 +1,8 @@
-# Azure Neural Net Studio v4.0 🧠☁️
+# Azure Neural Net Studio v5.0: Generative AI Edition 🧠🎨
 
-**The Universal Deep Learning Workbench**
+**The Complete Deep Learning Ecosystem**
 
-> *From MNIST to Multi-Modal: A Complete MLOps Ecosystem for Images, Tabular Data, and Time-Series*
+> *From Classification to Creation: A Full-Spectrum MLOps Platform Spanning Supervised, Unsupervised, and Generative AI*
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange.svg)](https://pytorch.org/)
@@ -14,145 +14,218 @@
 
 ## 📖 Overview
 
-**Azure Neural Net Studio v4.0** represents the evolution of deep learning experimentation—a **"Zero to Cloud"** workbench that bridges the gap between academic theory and production-ready machine learning. Born from a simple MNIST classifier (v1.0), it has matured into a comprehensive platform supporting **three fundamental data modalities** and their corresponding neural architectures.
+**Azure Neural Net Studio v5.0** represents the pinnacle of deep learning experimentation—a complete **"Zero to Cloud"** ecosystem that transcends traditional machine learning boundaries. This release marks the evolution from mere data analysis to **data creation**, implementing the full spectrum of modern AI capabilities.
 
-This release implements the **"Holy Trinity" of Deep Learning**:
-- **Feedforward Neural Networks (FNNs)** for structured tabular data
-- **Convolutional Neural Networks (CNNs)** for image processing
-- **Recurrent Neural Networks (RNNs)** for sequential time-series analysis
+**The Journey:**
+- **v1.0-v3.0:** Supervised Learning (Classification & Regression)
+- **v4.0:** Multi-Modal Workbench (Images, Tabular, Time-Series)
+- **v5.0:** **Generative AI Revolution** (Creation & Compression)
 
-All architectures coexist within a single, unified Streamlit dashboard, backed by dual-engine support (PyTorch + TensorFlow), automated benchmarking, and seamless Azure ML integration for cloud deployment.
+This edition introduces two groundbreaking paradigms:
+- **Generative Adversarial Networks (GANs):** Creating synthetic data that never existed before—watching AI "dream up" realistic handwritten digits from pure random noise
+- **Autoencoders:** Neural compression engines that distill 784-pixel images into 64-dimensional latent spaces and reconstruct them with remarkable fidelity
+
+Alongside the existing **CNN, FNN, and RNN architectures**, v5.0 now covers the complete deep learning taxonomy: **Supervised Learning** (prediction), **Unsupervised Learning** (representation), and **Generative AI** (creation).
 
 ### Evolution Timeline
 ```
-v1.0 (Genesis)    → MNIST Digit Classification
-v2.0 (Dual Engine) → PyTorch + TensorFlow Support
-v3.0 (Benchmarking) → Performance Comparison Suite + CIFAR-10
-v4.0 (Universal)   → Multi-Modal Support (Images + Tabular + Time-Series)
+v1.0 (Genesis)        → MNIST Digit Classification
+v2.0 (Dual Engine)    → PyTorch + TensorFlow Support
+v3.0 (Benchmarking)   → Performance Comparison + CIFAR-10
+v4.0 (Universal)      → Multi-Modal (Images + Tabular + Time-Series)
+v5.0 (Generative AI)  → GANs + Autoencoders + Full AI Spectrum
 ```
 
 ---
 
 ## ✨ Key Features
 
-### 🌈 **Universal Task Support**
-Toggle seamlessly between three distinct machine learning paradigms:
-- **Image Classification:** Computer vision tasks (CIFAR-10, MNIST, Fashion-MNIST)
-- **Tabular Classification:** Structured data analysis (Iris Species)
-- **Time-Series Regression:** Sequential prediction (Sine Wave Forecasting)
+### 🎨 **Generative AI Engine**
+Train Generative Adversarial Networks to synthesize completely new data:
+- **GAN Architecture:** Generator vs. Discriminator in an adversarial min-max game
+- **Creative Output:** Watch random noise transform into realistic handwritten digits over 20-50 epochs
+- **Visual Evolution:** Real-time visualization of the generation quality improving during training
+- **Synthetic Dataset Creation:** Generate unlimited unique digit samples that look indistinguishable from real MNIST data
 
-### 🏗️ **Trio of Neural Architectures**
-Each architecture is purpose-built for its domain:
+### 🗜️ **Neural Compression Engine**
+Deploy Autoencoders for intelligent dimensionality reduction:
+- **Compression Ratio:** 92% reduction (784 pixels → 64 latent features)
+- **Lossy Reconstruction:** Near-perfect image restoration from compact representations
+- **Latent Space Exploration:** Visualize how neural networks understand and encode visual information
+- **Bottleneck Learning:** Automatic feature extraction without manual engineering
 
-| Architecture | Data Type | Dataset | Use Case |
-|-------------|-----------|---------|----------|
-| **CNN** (Convolutional) | Images (32×32×3) | CIFAR-10/MNIST | Object & Pattern Recognition |
-| **FNN** (Feedforward) | Tabular (4 features) | Iris | Structured Classification |
-| **RNN** (Recurrent) | Time-Series (1 feature) | Sine Wave | Sequential Prediction |
+### 🌈 **The Full Spectrum**
+A unified platform covering every major deep learning paradigm:
+
+| Paradigm | Architecture | Task Type | Example |
+|----------|--------------|-----------|---------|
+| **Supervised** | CNN | Image Classification | CIFAR-10, MNIST |
+| **Supervised** | FNN | Tabular Classification | Iris Species |
+| **Supervised** | RNN | Time-Series Regression | Sine Wave Prediction |
+| **Unsupervised** | Autoencoder | Dimensionality Reduction | Image Compression |
+| **Generative** | GAN | Synthetic Data Creation | Digit Generation |
 
 ### ⚡ **Automated Benchmarking** *(Retained from v3.4)*
 One-click performance comparison:
 - **PyTorch vs. TensorFlow** accuracy head-to-head
-- Training time metrics
+- Training time metrics across all architectures
 - Real-time loss curve visualization
 - Model size and parameter counts
 
 ### ☁️ **Azure ML Integration**
-Deploy trained models directly to the cloud:
-- Support for both `.pth` (PyTorch) and `.h5` (TensorFlow) formats
-- Cross-modality deployment (CNNs, FNNs, RNNs)
+Deploy any model type directly to the cloud:
+- Support for `.pth` (PyTorch) and `.h5` (TensorFlow) formats
+- Cross-paradigm deployment (Supervised, Unsupervised, Generative)
 - Automated model registration and versioning
 
 ### 🎛️ **Interactive Control Panel**
-- **Real-time hyperparameter tuning:** Learning rate, epochs, batch size
-- **Live training metrics:** Dynamic loss/accuracy plots
-- **Dataset visualization:** Preview training samples before modeling
-- **Model architecture viewer:** Inspect layer-by-layer structure
+- **Paradigm Selector:** Switch between Supervised, Unsupervised, and Generative modes
+- **Live Training Metrics:** Dynamic loss/accuracy plots for all model types
+- **Visual Feedback:** Watch GANs create images and Autoencoders compress/decompress in real-time
+- **Architecture Viewer:** Inspect layer-by-layer structure for all 5 engines
 
 ---
 
 ## 🎯 What This Project Is About
 
-This project serves as a **masterclass in Deep Learning versatility**, demonstrating how to architect a production-grade MLOps system capable of handling fundamentally different data modalities within a unified framework. 
+This project represents a **comprehensive educational platform** that demonstrates the complete evolution of artificial intelligence—from analyzing existing data to **creating entirely new data from imagination**.
 
 **Core Educational Objectives:**
-1. **Architectural Diversity:** Understanding when and why to use CNNs vs. FNNs vs. RNNs
-2. **Data Preprocessing Pipelines:** Handling Images (normalization, augmentation) vs. Tabular (scaling, encoding) vs. Sequential (windowing, padding)
-3. **Framework Agnosticism:** Implementing identical architectures in both PyTorch and TensorFlow
-4. **MLOps Best Practices:** Version control, experiment tracking, and cloud deployment for diverse model types
 
-This is not just a code repository—it's a **blueprint for building adaptable machine learning systems** that can pivot between computer vision, structured data analysis, and time-series forecasting without architectural rewrites.
+1. **The Three Pillars of Modern AI:**
+   - **Supervised Learning:** Teaching machines to recognize patterns (CNN/FNN/RNN)
+   - **Unsupervised Learning:** Letting machines discover structure (Autoencoders)
+   - **Generative AI:** Enabling machines to create (GANs)
+
+2. **Adversarial Thinking:**
+   - Understanding the GAN min-max game: Generator (artist) vs. Discriminator (critic)
+   - Observing how competition drives quality in AI systems
+
+3. **Latent Space Understanding:**
+   - How neural networks compress and represent high-dimensional data
+   - The bottleneck principle: forcing networks to learn efficient encodings
+
+4. **Framework Agnosticism:**
+   - Implementing identical architectures in both PyTorch and TensorFlow
+   - Understanding framework-specific nuances in generative models
+
+This is not just a code repository—it's a **journey through the history and future of AI**, from 1950s perceptrons to 2020s generative models, all accessible through a single unified interface.
 
 ---
 
 ## 🔧 What It Does
 
-### **1. Image Classification** 🖼️
-Classifies visual inputs across three benchmark datasets:
+### **1. Generates New Data** 🎨✨
+Creates synthetic handwritten digits that never existed in the original MNIST dataset:
+- **GAN Training:** Generator learns to fool the Discriminator by producing realistic images
+- **Noise-to-Image Pipeline:** Transforms 100-dimensional random vectors into 28×28 digit images
+- **Quality Evolution:** Watch outputs progress from static → blurry shapes → clear digits over 50 epochs
+- **Unlimited Samples:** Generate infinite unique digits after training completes
+
+**Output:** Novel, realistic handwritten digits indistinguishable from human-written ones
+
+### **2. Compresses Images** 🗜️
+Reduces image dimensionality using neural compression:
+- **Autoencoder Architecture:** 784 pixels → 64 latent features → 784 reconstructed pixels
+- **Compression Ratio:** 92% size reduction while preserving visual fidelity
+- **Lossy Reconstruction:** Slightly blurry outputs (acceptable trade-off for 12× compression)
+- **Latent Space Visualization:** Explore how 64 numbers can encode an entire image
+
+**Output:** Compressed latent representations + reconstructed images
+
+### **3. Classifies Visual Inputs** 🖼️ *(Legacy - v1-v4)*
+Maintains all supervised learning capabilities:
 - **MNIST:** Handwritten digits (0-9) — 28×28 grayscale
-- **Fashion-MNIST:** Clothing categories (T-shirts, Trousers, Bags) — 28×28 grayscale  
-- **CIFAR-10:** Real-world objects (Airplanes, Cars, Birds, Cats) — 32×32 RGB
+- **Fashion-MNIST:** Clothing categories — 28×28 grayscale
+- **CIFAR-10:** Real-world objects (Airplanes, Cars, Birds) — 32×32 RGB
 
-**Output:** 10-class probability distribution with confidence scores
+**Output:** 10-class probability distributions with confidence scores
 
-### **2. Tabular Classification** 🌺
-Performs multi-class classification on structured datasets:
-- **Iris Dataset:** Predicts flower species (Setosa, Versicolor, Virginica) based on 4 botanical measurements (sepal length/width, petal length/width)
-- **Features:** 150 samples, 4 numerical inputs, 3 balanced classes
+### **4. Classifies Tabular Data** 🌺 *(Legacy - v4)*
+Multi-class classification on structured datasets:
+- **Iris Dataset:** Flower species prediction from 4 botanical measurements
+- **Features:** 150 samples, balanced 3-class problem
 
-**Output:** Species prediction with class probabilities
+**Output:** Species predictions with class probabilities
 
-### **3. Time-Series Regression** 📈
-Forecasts future values in sequential data:
-- **Sine Wave Prediction:** Learns sinusoidal patterns from historical data
-- **Architecture:** SimpleRNN learns temporal dependencies to predict next timestep
-- **Synthetic Data:** Generates 1000 samples of sin(x) with configurable noise
+### **5. Forecasts Time-Series** 📈 *(Legacy - v4)*
+Sequential prediction using recurrent networks:
+- **Sine Wave Regression:** Learns temporal patterns from historical data
+- **RNN Architecture:** SimpleRNN captures dependencies across 50 timesteps
 
-**Output:** Continuous value prediction (regression)
+**Output:** Continuous value predictions for future timesteps
 
 ---
 
 ## 🧩 What Is The Logic?
 
-### **Dynamic Context Switching**
-The application employs **intelligent runtime reconfiguration** based on the selected task:
+### **Generative Adversarial Networks (GANs)**
+
+The GAN framework implements a **game-theoretic approach** to generative modeling:
 
 ```python
-if task_type == "Image Classification":
-    data_loader = ImageDataLoader(dataset="CIFAR-10")
-    model = CNN_Architecture()
-    preprocessor = ImageNormalizer()
+# The Min-Max Game
+while training:
+    # Generator's Goal: Maximize discriminator's error
+    fake_images = Generator(random_noise)
+    generator_loss = -log(Discriminator(fake_images))
     
-elif task_type == "Tabular Classification":
-    data_loader = IrisDataLoader()
-    model = FNN_Architecture(input_dim=4, output_dim=3)
-    preprocessor = StandardScaler()
+    # Discriminator's Goal: Minimize classification error
+    real_loss = -log(Discriminator(real_images))
+    fake_loss = -log(1 - Discriminator(fake_images))
+    discriminator_loss = real_loss + fake_loss
     
-elif task_type == "Time-Series Regression":
-    data_loader = TimeSeriesGenerator()
-    model = RNN_Architecture(sequence_length=50)
-    preprocessor = SequenceWindower()
+    # Both networks improve through competition
 ```
 
-### **Key Design Patterns**
+**Key Concepts:**
+1. **Adversarial Equilibrium:** Training continues until Generator produces images so realistic that Discriminator can only guess (50% accuracy)
+2. **Mode Collapse Risk:** Generator may exploit weaknesses in Discriminator, producing limited variety
+3. **Nash Equilibrium:** Theoretical convergence point where neither network can improve further
 
-1. **Strategy Pattern:** Swappable data loaders, models, and training loops
-2. **Factory Pattern:** Dynamic model instantiation based on task + framework selection
-3. **Observer Pattern:** Real-time UI updates during training via Streamlit callbacks
+### **Autoencoders**
 
-### **Data Generation Pipeline**
+Neural compression through **bottleneck learning**:
 
-**Iris Dataset (Tabular):**
 ```python
-from sklearn.datasets import load_iris
-X, y = load_iris(return_X_y=True)  # 150 samples, 4 features
+# Compression Pipeline
+original_image = 784 dimensions  # 28×28 pixels
+
+# Encoder: Force information through narrow bottleneck
+latent_code = Encoder(original_image)  # 64 dimensions (92% compression)
+
+# Decoder: Reconstruct from compressed representation
+reconstructed = Decoder(latent_code)  # 784 dimensions
+
+# Training Objective: Minimize reconstruction error
+loss = MSE(original_image, reconstructed)
 ```
 
-**Sine Wave (Time-Series):**
+**Key Concepts:**
+1. **Dimensionality Reduction:** Network learns the most important features
+2. **Lossy Compression:** Some information is lost, resulting in slightly blurry reconstructions
+3. **Latent Space:** The 64-dimensional bottleneck represents learned features
+
+### **Dynamic Task Switching** *(Retained from v4)*
+
+Runtime reconfiguration based on selected paradigm:
+
 ```python
-import numpy as np
-X = np.linspace(0, 100, 1000)
-y = np.sin(X) + np.random.normal(0, 0.1, 1000)  # Add noise
+if paradigm == "Generative AI":
+    if task == "GANs":
+        models = {
+            'generator': GAN_Generator(latent_dim=100),
+            'discriminator': GAN_Discriminator()
+        }
+        training_loop = adversarial_training
+        
+    elif task == "Autoencoders":
+        model = Autoencoder(latent_dim=64)
+        training_loop = reconstruction_training
+        
+elif paradigm == "Supervised Learning":
+    # Original CNN/FNN/RNN logic (v1-v4)
+    ...
 ```
 
 ---
@@ -163,57 +236,79 @@ y = np.sin(X) + np.random.normal(0, 0.1, 1000)  # Add noise
 
 ```mermaid
 graph LR
-    A[Select Task] --> B{Task Type?}
-    B -->|Images| C[Load CIFAR-10/MNIST]
-    B -->|Tabular| D[Load Iris Dataset]
-    B -->|Time-Series| E[Generate Sine Wave]
+    A[Select Paradigm] --> B{Paradigm Type?}
+    B -->|Supervised| C[CNN/FNN/RNN]
+    B -->|Unsupervised| D[Autoencoder]
+    B -->|Generative| E[GAN]
     
-    C --> F[Train CNN]
-    D --> G[Train FNN]
-    E --> H[Train RNN]
+    C --> F[Train Classifier/Regressor]
+    D --> G[Train Compressor]
+    E --> H[Train Generator + Discriminator]
     
-    F --> I[Visualize Metrics]
-    G --> I
-    H --> I
+    F --> I[Visualize Predictions]
+    G --> J[Compare Original vs. Reconstructed]
+    H --> K[Display Real vs. Fake Samples]
     
-    I --> J[Deploy to Azure ML]
+    I --> L[Deploy to Azure ML]
+    J --> L
+    K --> L
 ```
 
 ### **Step-by-Step User Journey**
 
-#### **Step 1: Task Selection** 🎯
-Navigate to the sidebar and choose your modality:
-- **"Image Classification"** → Activates CNN pipeline
-- **"Tabular Classification"** → Activates FNN pipeline
-- **"Time-Series Regression"** → Activates RNN pipeline
+#### **Step 1: Paradigm Selection** 🎯
+Navigate to the sidebar and choose your learning paradigm:
+- **"Supervised Learning"** → Activates CNN/FNN/RNN engines
+- **"Unsupervised Learning"** → Activates Autoencoder engine
+- **"Generative AI"** → Activates GAN engine with specialized visualization
 
-#### **Step 2: Data Visualization** 👁️
-Inspect your dataset before training:
-- **Images:** Gallery view of sample images with labels
-- **Tabular:** Feature distribution histograms + correlation matrix
-- **Time-Series:** Line plot of sine wave with training/validation split markers
+#### **Step 2: Task Configuration** 🛠️
+Select specific task within the paradigm:
+- **Generative:** "Generate Digits (GAN)" or "Compress Images (Autoencoder)"
+- **Supervised:** "Classify Images (CNN)", "Classify Tabular (FNN)", "Forecast Series (RNN)"
 
-#### **Step 3: Model Training** 🚀
-Configure hyperparameters and launch training:
+#### **Step 3: Visual Feedback** 👁️
+Experience paradigm-specific visualizations:
+- **GANs:** Side-by-side comparison of real MNIST digits vs. GAN-generated fakes
+- **Autoencoders:** Before/After grid showing original images and reconstructions
+- **Supervised:** Standard training curves and confusion matrices
+
+#### **Step 4: Model Training** 🚀
+
+**Generative AI - GANs:**
 ```python
-# Example: Time-Series RNN Training
 epochs = 50
-learning_rate = 0.001
-batch_size = 32
+latent_dim = 100
+batch_size = 128
 
-# Watch as RNN loss drops from 0.45 → 0.001 over 50 epochs
-# Real-time loss curves update every epoch
+# Watch noise transform into digits
+# Epoch 1:  Pure static
+# Epoch 10: Vague shapes emerge
+# Epoch 30: Recognizable digits
+# Epoch 50: Indistinguishable from real data
+```
+
+**Unsupervised - Autoencoders:**
+```python
+epochs = 30
+latent_dim = 64  # 92% compression
+learning_rate = 0.001
+
+# Reconstruction loss: 0.15 → 0.05 → 0.02
+# Output: Slightly blurry but recognizable digits
 ```
 
 **Expected Results:**
+- **GAN:** Generator loss stabilizes around 0.7-1.0, Discriminator around 50% accuracy
+- **Autoencoder:** Reconstruction MSE < 0.02 after 30 epochs
 - **CNN (CIFAR-10):** 60-65% accuracy after 10 epochs (CPU baseline)
-- **FNN (Iris):** 95-98% accuracy after 100 epochs (instant on CPU)
+- **FNN (Iris):** 95-98% accuracy (instant training)
 - **RNN (Sine Wave):** MSE < 0.001 after 50 epochs
 
-#### **Step 4: Cloud Deployment** ☁️
-Export trained model with one click:
-- PyTorch models → `.pth` files
-- TensorFlow models → `.h5` files
+#### **Step 5: Deployment** ☁️
+Export any model type with one click:
+- GAN models → `generator.pth` + `discriminator.pth`
+- Autoencoder → `autoencoder.h5`
 - Automatic Azure ML workspace registration
 
 ---
@@ -222,8 +317,10 @@ Export trained model with one click:
 
 ### **System Requirements**
 - **Python:** 3.10 or higher
-- **RAM:** Minimum 8GB (16GB recommended for CIFAR-10 training)
-- **GPU:** Optional (CUDA-enabled GPU accelerates CNN/RNN training by 10-50×)
+- **RAM:** Minimum 8GB (16GB recommended for GAN training)
+- **GPU:** Optional but **highly recommended** for GANs (10-20× speedup)
+  - GAN training on CPU: ~5-10 min/epoch
+  - GAN training on GPU: ~30 sec/epoch
 
 ### **Core Dependencies**
 
@@ -242,8 +339,8 @@ azureml-core>=1.53.0
 ```
 
 ### **Optional Dependencies**
-- `tensorboard>=2.13.0` — Enhanced training visualization
-- `torchvision>=0.15.0` — Additional image datasets
+- `tensorboard>=2.13.0` — Enhanced GAN training visualization
+- `torchvision>=0.15.0` — Additional datasets
 - `jupyter>=1.0.0` — Notebook experimentation
 
 ---
@@ -251,96 +348,168 @@ azureml-core>=1.53.0
 ## 🏛️ Technical Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                   STREAMLIT UI LAYER                        │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │ Image Panel  │  │ Tabular Panel│  │ Time-Series  │      │
-│  │   Selector   │  │   Selector   │  │   Selector   │      │
-│  └──────────────┘  └──────────────┘  └──────────────┘      │
-└───────────────────────┬──────────────────────────────────────┘
-                        │
-            ┌───────────┴───────────┐
-            │  Task Router Engine   │
-            └───────────┬───────────┘
-                        │
-        ┌───────────────┼───────────────┐
-        │               │               │
-   ┌────▼─────┐  ┌─────▼────┐  ┌──────▼─────┐
-   │   CNN    │  │   FNN    │  │    RNN     │
-   │  Engine  │  │  Engine  │  │   Engine   │
-   │          │  │          │  │            │
-   │ CIFAR-10 │  │   Iris   │  │ Sine Wave  │
-   │  MNIST   │  │ (4→3)    │  │  (1→1)     │
-   │ Fashion  │  │          │  │            │
-   └────┬─────┘  └─────┬────┘  └──────┬─────┘
-        │              │              │
-        └──────────────┼──────────────┘
-                       │
-            ┌──────────▼──────────┐
-            │  Dual Framework     │
-            │  PyTorch/TensorFlow │
-            └──────────┬──────────┘
-                       │
-            ┌──────────▼──────────┐
-            │  Azure ML Deployer  │
-            └─────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                       STREAMLIT UI LAYER                            │
+│  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌────────────┐   │
+│  │ Supervised │  │Unsupervised│  │ Generative │  │ Benchmark  │   │
+│  │   Panel    │  │   Panel    │  │   Panel    │  │   Panel    │   │
+│  └────────────┘  └────────────┘  └────────────┘  └────────────┘   │
+└─────────────────────────┬───────────────────────────────────────────┘
+                          │
+              ┌───────────┴───────────┐
+              │  Paradigm Router      │
+              │  (Supervised/Unsu/Gen)│
+              └───────────┬───────────┘
+                          │
+        ┌─────────────────┼─────────────────────────┐
+        │                 │                         │
+   ┌────▼─────┐     ┌────▼─────┐            ┌─────▼──────┐
+   │SUPERVISED│     │UNSUPERV. │            │ GENERATIVE │
+   │ ENGINES  │     │ ENGINE   │            │  ENGINES   │
+   └────┬─────┘     └────┬─────┘            └─────┬──────┘
+        │                │                         │
+   ┌────┼─────┐          │                    ┌────┼─────┐
+   │    │     │          │                    │         │
+┌──▼─┐ ┌▼──┐ ┌▼──┐   ┌──▼──────┐       ┌────▼────┐ ┌──▼─────┐
+│CNN │ │FNN│ │RNN│   │Autoencoder│      │Generator│ │Discrim.│
+│    │ │   │ │   │   │           │      │         │ │        │
+│CIFARMNIST│Sine│   │  64-dim   │      │ Latent  │ │Real/Fake│
+│-10 │ │Iris│Wave│   │ Bottleneck│      │  100    │ │Classifier│
+└────┘ └───┘ └───┘   └───────────┘      └─────────┘ └────────┘
+   │      │     │          │                  │          │
+   └──────┼─────┼──────────┼──────────────────┼──────────┘
+          │     │          │                  │
+          └─────┴──────────┴──────────────────┘
+                          │
+              ┌───────────▼───────────┐
+              │   Dual Framework      │
+              │  PyTorch / TensorFlow │
+              └───────────┬───────────┘
+                          │
+              ┌───────────▼───────────┐
+              │   Azure ML Deployer   │
+              └───────────────────────┘
 ```
 
 ### **Component Interactions**
 
-1. **UI Layer:** Streamlit widgets capture user selections
-2. **Router:** Dispatches requests to appropriate engine (CNN/FNN/RNN)
-3. **Engines:** Execute training loops with framework-specific code
+1. **UI Layer:** Streamlit widgets capture paradigm and task selections
+2. **Paradigm Router:** Dispatches requests to appropriate engine category
+3. **Engines:** Execute specialized training loops:
+   - **Supervised:** Standard backpropagation with labels
+   - **Unsupervised:** Reconstruction loss minimization
+   - **Generative:** Adversarial training (dual optimizer)
 4. **Deployer:** Packages models and pushes to Azure ML
 
 ---
 
 ## 📊 Model Specifications
 
-### **1. CNN Architecture (Image Classification)**
+### **1. GAN Generator (Generative AI)**
 ```python
-Conv2D(3, 32, kernel_size=3, padding=1)  # Input: 32×32×3
-ReLU()
-MaxPool2D(kernel_size=2, stride=2)        # Output: 16×16×32
+Input: Random Noise (latent_dim=100)
+Dense(100, 256)
+LeakyReLU(0.2)
+BatchNorm1d(256)
 
-Conv2D(32, 64, kernel_size=3, padding=1)
-ReLU()
-MaxPool2D(kernel_size=2, stride=2)        # Output: 8×8×64
+Dense(256, 512)
+LeakyReLU(0.2)
+BatchNorm1d(512)
 
-Flatten()                                 # Output: 4096
-Dense(4096, 128)
-ReLU()
-Dense(128, 10)                            # Output: 10 classes
-Softmax()
+Dense(512, 1024)
+LeakyReLU(0.2)
+BatchNorm1d(1024)
+
+Dense(1024, 784)   # Output: 28×28 image
+Tanh()             # Scale to [-1, 1]
 ```
-**Parameters:** ~530K  
-**Training Time (CPU):** ~15 min/epoch on CIFAR-10
+**Parameters:** ~1.4M  
+**Training Time (CPU):** ~8 min/epoch  
+**Training Time (GPU):** ~30 sec/epoch
 
 ---
 
-### **2. FNN Architecture (Tabular Classification - Iris)**
+### **2. GAN Discriminator (Generative AI)**
 ```python
-Input(4)          # [sepal_length, sepal_width, petal_length, petal_width]
+Input: Image (784 pixels, flattened 28×28)
+Dense(784, 512)
+LeakyReLU(0.2)
+Dropout(0.3)
+
+Dense(512, 256)
+LeakyReLU(0.2)
+Dropout(0.3)
+
+Dense(256, 1)      # Output: Real/Fake probability
+Sigmoid()
+```
+**Parameters:** ~660K  
+**Training Time:** Coupled with Generator
+
+---
+
+### **3. Autoencoder (Unsupervised Learning)**
+```python
+# Encoder
+Input(784)         # 28×28 image
+Dense(128)
+ReLU()
+Dense(64)          # Bottleneck: 92% compression
+ReLU()
+
+# Decoder
+Dense(128)
+ReLU()
+Dense(784)         # Reconstructed image
+Sigmoid()          # Scale to [0, 1]
+```
+**Parameters:** ~203K  
+**Compression Ratio:** 12.25× (784 → 64)  
+**Training Time (CPU):** ~30 sec/epoch
+
+---
+
+### **4. CNN Architecture** *(Supervised - v1-v4)*
+```python
+Conv2D(3, 32, kernel_size=3, padding=1)
+ReLU()
+MaxPool2D(kernel_size=2, stride=2)
+
+Conv2D(32, 64, kernel_size=3, padding=1)
+ReLU()
+MaxPool2D(kernel_size=2, stride=2)
+
+Flatten()
+Dense(4096, 128)
+ReLU()
+Dense(128, 10)
+Softmax()
+```
+**Parameters:** ~530K
+
+---
+
+### **5. FNN Architecture** *(Supervised - v4)*
+```python
+Input(4)
 Dense(64)
 ReLU()
 Dense(32)
 ReLU()
-Dense(3)          # [Setosa, Versicolor, Virginica]
+Dense(3)
 Softmax()
 ```
-**Parameters:** ~2.3K  
-**Training Time (CPU):** <1 second for 100 epochs
+**Parameters:** ~2.3K
 
 ---
 
-### **3. RNN Architecture (Time-Series Regression - Sine Wave)**
+### **6. RNN Architecture** *(Supervised - v4)*
 ```python
-Input(sequence_length=50, features=1)  # 50 timesteps
+Input(sequence_length=50, features=1)
 SimpleRNN(units=128, return_sequences=False)
-Dense(1)                               # Next timestep prediction
+Dense(1)
 ```
-**Parameters:** ~16.5K  
-**Training Time (CPU):** ~2 min for 50 epochs
+**Parameters:** ~16.5K
 
 ---
 
@@ -459,29 +628,118 @@ Network URL:  http://192.168.x.x:8501
 ```
 
 **First Launch Checklist:**
-- ✅ Sidebar displays three task options
-- ✅ Default task is "Image Classification"
+- ✅ Sidebar displays paradigm selector (Supervised/Unsupervised/Generative)
+- ✅ Default paradigm is "Supervised Learning"
 - ✅ Framework selector shows PyTorch/TensorFlow toggle
-- ✅ Dataset downloader initializes CIFAR-10
+- ✅ Dataset downloader initializes MNIST/CIFAR-10
 
 ---
 
 ## 📖 User Guide
 
-### **Scenario A: Train a CNN on CIFAR-10** 🖼️
+### **Scenario A: Generate Synthetic Digits with GANs** 🎨✨
 
-**Objective:** Classify real-world objects (airplanes, cars, birds, etc.)
+**Objective:** Train a GAN to create realistic handwritten digits from random noise
 
-1. **Select Task:**
-   - Sidebar → **"Image Classification"**
+1. **Select Paradigm:**
+   - Sidebar → **"Generative AI"**
+   - Task → **"Generate Digits (GAN)"**
+
+2. **Configure Training:**
+   ```
+   Framework: PyTorch
+   Epochs: 50
+   Latent Dimension: 100
+   Learning Rate: 0.0002
+   Batch Size: 128
+   ```
+
+3. **Understand the Architecture:**
+   - **Generator:** Transforms 100-D noise vectors into 784-pixel images
+   - **Discriminator:** Binary classifier distinguishing real from fake
+
+4. **Start Training:**
+   - Click **"Train GAN"**
+   - **Epoch 1-10:** Generator produces random static
+   - **Epoch 10-25:** Vague digit-like shapes emerge
+   - **Epoch 25-40:** Clear but imperfect digits
+   - **Epoch 40-50:** Realistic, diverse digits
+
+5. **Monitor Progress:**
+   - **Generator Loss:** Should stabilize around 0.7-1.5
+   - **Discriminator Loss:** Should hover around 0.6-0.8
+   - **Discriminator Accuracy:** Target ~50% (can't distinguish real from fake)
+
+6. **Visual Inspection:**
+   - View grid of 16 generated samples
+   - Compare against real MNIST digits
+   - Observe diversity in styles (thin, thick, slanted)
+
+7. **Common Issues:**
+   - **Mode Collapse:** All digits look the same → Restart with lower learning rate
+   - **Discriminator Wins:** Generated images stay noisy → Increase Generator capacity
+   - **Generator Wins:** Discriminator accuracy drops to 0% → Increase Discriminator learning rate
+
+**Expected Outcome:** High-quality synthetic digits indistinguishable from real MNIST
+
+---
+
+### **Scenario B: Compress Images with Autoencoders** 🗜️
+
+**Objective:** Learn neural compression to reduce image size by 92%
+
+1. **Select Paradigm:**
+   - Sidebar → **"Unsupervised Learning"**
+   - Task → **"Compress Images (Autoencoder)"**
+
+2. **Configure Training:**
+   ```
+   Framework: TensorFlow
+   Epochs: 30
+   Latent Dimension: 64  # 784 → 64 (92% compression)
+   Learning Rate: 0.001
+   Batch Size: 256
+   ```
+
+3. **Understand the Process:**
+   - **Encoder:** Compresses 784 pixels → 64 latent features
+   - **Bottleneck:** Forces network to learn efficient representation
+   - **Decoder:** Reconstructs 64 features → 784 pixels
+
+4. **Start Training:**
+   - Click **"Train Autoencoder"**
+   - Watch reconstruction loss decrease: 0.15 → 0.05 → 0.02
+
+5. **Evaluate Results:**
+   - **Original vs. Reconstructed Grid:** Side-by-side comparison of 16 images
+   - **Reconstruction MSE:** Target < 0.03 (acceptable blur)
+   - **Visual Quality:** Digits recognizable but slightly blurry
+
+6. **Explore Latent Space:**
+   - View the 64-dimensional encoding for sample images
+   - Notice how similar digits have similar encodings
+
+7. **Practical Applications:**
+   - **Image Compression:** Store images 12× more efficiently
+   - **Denoising:** Train on noisy images, reconstruct clean versions
+   - **Anomaly Detection:** High reconstruction error = unusual input
+
+**Expected Outcome:** 92% compression with visually acceptable reconstruction quality
+
+---
+
+### **Scenario C: Classic Supervised Learning** 🖼️🌺📈
+
+**Objective:** Train traditional CNN/FNN/RNN models (v1-v4 functionality)
+
+#### **C1: Image Classification (CNN)**
+
+1. **Select Paradigm:**
+   - Sidebar → **"Supervised Learning"**
+   - Task → **"Classify Images"**
    - Dataset → **"CIFAR-10"**
 
-2. **Explore Data:**
-   - Click **"Show Sample Images"**
-   - Observe 32×32 RGB images with class labels
-   - Review class distribution (5,000 images per class)
-
-3. **Configure Training:**
+2. **Configure & Train:**
    ```
    Framework: PyTorch
    Epochs: 10
@@ -489,124 +747,68 @@ Network URL:  http://192.168.x.x:8501
    Batch Size: 64
    ```
 
-4. **Start Training:**
-   - Click **"Train Model"**
-   - Monitor real-time loss curve (should drop from 2.3 → 0.8)
+3. **Expected Results:**
    - Final accuracy: **~60-65%** on test set (CPU baseline)
+   - Training time: ~15 min/epoch (CPU), ~2 min/epoch (GPU)
 
-5. **Benchmark (Optional):**
-   - Click **"Compare Frameworks"**
-   - Wait for TensorFlow training
-   - Compare accuracy: PyTorch vs. TensorFlow (typically within 1-2%)
-
-6. **Deploy:**
-   - Click **"Deploy to Azure"**
-   - Download `.pth` file locally
-   - (If Azure configured) Model auto-uploads to ML workspace
-
----
-
-### **Scenario B: Train an FNN on Iris** 🌺
-
-**Objective:** Classify flower species from botanical measurements
+#### **C2: Tabular Classification (FNN)**
 
 1. **Select Task:**
-   - Sidebar → **"Tabular Classification"**
-   - Dataset → **"Iris"** (auto-loads)
+   - **"Classify Tabular Data"** → Iris Dataset
 
-2. **Visualize Features:**
-   - View pairplot of 4 features (sepal/petal dimensions)
-   - Observe clear clustering of 3 species
-   - Check correlation heatmap
+2. **Expected Results:**
+   - Final accuracy: **~97%** (instant training)
 
-3. **Configure Training:**
-   ```
-   Framework: TensorFlow
-   Epochs: 100
-   Learning Rate: 0.01
-   Batch Size: 16
-   ```
-
-4. **Start Training:**
-   - Click **"Train Model"**
-   - Training completes in **<1 second** (tiny dataset)
-   - Final accuracy: **~97%** (nearly perfect separation)
-
-5. **Test Predictions:**
-   - Input custom features:
-     ```
-     Sepal Length: 5.1
-     Sepal Width:  3.5
-     Petal Length: 1.4
-     Petal Width:  0.2
-     ```
-   - Prediction: **Setosa** (confidence: 99.8%)
-
----
-
-### **Scenario C: Train an RNN on Sine Waves** 📈
-
-**Objective:** Learn temporal patterns and forecast future values
+#### **C3: Time-Series Regression (RNN)**
 
 1. **Select Task:**
-   - Sidebar → **"Time-Series Regression"**
-   - Data Generator → **"Sine Wave"** (1000 samples)
+   - **"Forecast Time-Series"** → Sine Wave
 
-2. **Visualize Sequence:**
-   - See full sine wave plot
-   - Training window: Blue (timesteps 0-800)
-   - Validation window: Orange (timesteps 800-1000)
-
-3. **Configure Training:**
-   ```
-   Framework: PyTorch
-   Epochs: 50
-   Learning Rate: 0.001
-   Sequence Length: 50  # Use 50 past points to predict next
-   ```
-
-4. **Start Training:**
-   - Click **"Train Model"**
-   - Watch MSE decrease: 0.45 → 0.008 → 0.001
-   - Training time: **~2 minutes** on CPU
-
-5. **Evaluate Predictions:**
-   - View overlay of true vs. predicted values
-   - RNN learns sinusoidal pattern with **<0.1% error**
-   - Test on unseen data (timesteps 800-1000)
-
-6. **Export Model:**
-   - Save as `sine_wave_rnn.pth`
-   - Load in production for real-time forecasting
+2. **Expected Results:**
+   - Final MSE: **< 0.001** after 50 epochs
 
 ---
 
 ## ⚠️ Restrictions and Limitations
 
-### **Computational Constraints**
-- **RNN Training:** Time-series models require sequential processing and cannot be fully parallelized—expect longer training times on CPU (2-5 minutes for 50 epochs)
-- **CNN Training:** CIFAR-10 training on CPU takes ~15 min/epoch. **Recommended:** Use GPU for image tasks (reduces to ~2 min/epoch)
+### **Generative AI Challenges**
 
-### **Dataset Limitations**
-- **Iris Dataset:** Only 150 samples → Training is instant but model evaluation has high variance. Use k-fold cross-validation for robust metrics
-- **Sine Wave:** Synthetic data with zero noise yields unrealistic performance (MSE ~ 0.0001). Real-world time-series data will have higher error rates
+#### **GANs - Inherent Instability**
+- **Mode Collapse:** Generator may produce limited variety (all 1s, all 7s)
+  - **Solution:** Restart training, adjust learning rates, add noise to Discriminator inputs
+- **Training Divergence:** Losses may oscillate wildly without convergence
+  - **Solution:** Reduce learning rates, use gradient clipping
+- **Discriminator Dominance:** Generator stuck producing noise
+  - **Solution:** Train Generator 2× per Discriminator update
+- **Generator Dominance:** Discriminator accuracy drops to 0%
+  - **Solution:** Add dropout, reduce Generator capacity
+
+**Important:** GAN training is inherently unstable. Expect 20-30% of training runs to fail. This is normal and reflects the cutting-edge nature of adversarial learning.
+
+#### **Autoencoders - Lossy Compression**
+- **Blurry Reconstructions:** 92% compression inherently loses information
+  - **Trade-off:** Sharper images require larger latent dimensions (less compression)
+- **Fine Detail Loss:** Small features (dots, thin lines) may disappear
+  - **Solution:** Increase latent_dim to 128 or 256 for higher fidelity
+
+### **Computational Constraints**
+- **GAN Training:** Extremely resource-intensive
+  - **CPU:** 5-10 min/epoch (impractical for 50+ epochs)
+  - **GPU:** 30 sec/epoch (strongly recommended)
+- **Memory Requirements:**
+  - **GANs:** Minimum 12GB RAM (16GB recommended)
+  - **Autoencoders:** 8GB sufficient
 
 ### **Framework Differences**
-- **PyTorch vs. TensorFlow:** Minor accuracy discrepancies (1-3%) due to different initialization schemes and optimizer implementations
-- **Reproducibility:** Set random seeds for both frameworks to ensure consistent results:
-  ```python
-  torch.manual_seed(42)
-  tf.random.set_seed(42)
-  ```
+- **PyTorch vs. TensorFlow:** GANs show greater variance (5-10% accuracy difference)
+- **Reproducibility:** Adversarial training is non-deterministic even with fixed seeds
+
+### **Dataset Limitations**
+- **MNIST Only:** Current GAN/Autoencoder implementations trained on MNIST
+- **Future Work:** Extend to CIFAR-10 (requires architectural modifications)
 
 ### **Azure Deployment**
-- Requires active Azure subscription with ML workspace configured
-- Model size limits: `.pth` files >500MB may fail to upload (compress large models)
-- Authentication: Ensure Azure CLI is logged in (`az login`)
-
-### **Browser Compatibility**
-- Streamlit runs best on Chrome/Firefox/Edge
-- Safari may have issues with real-time plot updates
+- **Model Size:** GAN generators (1.4MB) deploy smoothly, full GAN pairs (2.1MB) may require compression
 
 ---
 
@@ -615,33 +817,43 @@ Network URL:  http://192.168.x.x:8501
 **EDUCATIONAL USE ONLY**
 
 This project is developed strictly for **academic and learning purposes**. It is intended to demonstrate:
-- Neural network architecture design principles
-- Multi-framework development (PyTorch + TensorFlow)
-- MLOps pipeline construction
-- Cloud deployment workflows
+- Generative Adversarial Network principles and training dynamics
+- Unsupervised learning through autoencoders
+- Neural compression and latent space representations
+- Multi-paradigm MLOps pipeline construction
+- Cloud deployment workflows for diverse model types
 
 **Not Suitable For:**
-- Production-grade applications without extensive testing
+- Production-grade generative applications without extensive tuning
 - Mission-critical systems requiring 99.9% uptime
 - Medical, financial, or safety-critical decision-making
-- Commercial deployment without proper validation
+- Commercial deployment of synthetic data without bias testing
+- Malicious use (deepfakes, synthetic identity fraud)
+
+**Generative AI Ethics:**
+- Synthetic data can perpetuate biases present in training sets
+- Generated content should be clearly labeled as AI-created
+- Consider societal implications of realistic synthetic media
 
 **Model Performance:**
-- Benchmark datasets (CIFAR-10, MNIST, Iris) are toy examples
-- Real-world performance will vary significantly based on:
+- GAN outputs may occasionally produce offensive or nonsensical results
+- Autoencoder reconstructions are approximations, not perfect copies
+- Real-world performance varies significantly based on:
   - Data quality and quantity
-  - Domain-specific preprocessing
   - Hyperparameter tuning
-  - Hardware capabilities
+  - Hardware capabilities (GPU vs. CPU)
+  - Training stability (GANs)
 
 **Security Notice:**
 - Do not commit Azure credentials to version control
-- Use environment variables or Azure Key Vault for secrets
+- Generated data may leak training set characteristics
 - Regularly update dependencies to patch security vulnerabilities
 
 **Liability:**
 The author assumes no responsibility for:
+- Quality or safety of generated synthetic data
 - Model predictions or deployment outcomes
+- Misuse of generative capabilities
 - Data loss or corruption
 - Security breaches due to misconfiguration
 - Cloud service costs incurred
@@ -650,13 +862,22 @@ The author assumes no responsibility for:
 
 ## 👨‍💻 Author
 
-**Waqar Salim**  
+<div align="center">
+
+### **Waqar Salim**
+
 *Master's Student & IT Professional*
 
-- 🌐 LinkedIn: [linkedin.com/in/waqarsalim](https://www.linkedin.com/in/waqar-salim/)
-- 🐙 GitHub: [WSalim2024](https://github.com/WSalim2024)
+---
 
-**Acknowledgments:**
+[![GitHub](https://img.shields.io/badge/GitHub-WSalim2024-181717?style=for-the-badge&logo=github)](https://github.com/WSalim2024)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/waqar-salim/)
+
+---
+
+**Special Thanks:**
+- Ian Goodfellow et al. for pioneering GANs (2014)
+- Geoffrey Hinton for autoencoder foundations
 - PyTorch & TensorFlow development teams
 - Streamlit for the exceptional web framework
 - Azure ML team for cloud integration tools
@@ -672,16 +893,32 @@ Contributions are welcome! If you'd like to enhance the project:
 4. Push to branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
-**Contribution Ideas:**
-- Add support for Transformer architectures (BERT, GPT)
-- Integrate additional datasets (ImageNet, UCI ML Repository)
-- Implement automated hyperparameter tuning (Optuna, Ray Tune)
-- Add model explainability (SHAP, LIME)
+**High-Priority Contribution Ideas:**
+- **Conditional GANs:** Generate specific digit classes on demand
+- **Variational Autoencoders (VAEs):** Probabilistic latent spaces
+- **StyleGAN Integration:** High-resolution image generation
+- **CIFAR-10 GANs:** Extend generative capabilities to color images
+- **Progressive Growing:** Stable training for larger images
+- **Wasserstein GAN:** More stable adversarial training
+- **Model Explainability:** SHAP/LIME for generative models
+
+---
+
+**Known Issues:**
+- GAN training may crash on systems with <8GB RAM
+- Autoencoder reconstructions show artifacts on high-frequency patterns
+- Azure deployment may timeout for large GAN models
+
+---
 
 <div align="center">
 
 **Built with ❤️ for the Deep Learning Community**
 
-*"From pixels to predictions, from tables to time—one workbench to rule them all."*
+*"From classification to creation, from analysis to imagination—the complete AI spectrum in one platform."*
+
+---
+
+### 🎨 **The Future is Generative** ✨
 
 </div>

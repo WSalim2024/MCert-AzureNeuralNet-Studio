@@ -25,13 +25,14 @@ amt-code/
 amltmp/
 
 # --- Data & Artifacts ---
-# 1. Ignore dataset downloads (CIFAR-10 is large)
+# 1. Ignore dataset downloads (CIFAR-10, MNIST, Fashion-MNIST)
 data/
 
-# 2. Ignore trained model binaries (produced by v4.0 app)
+# 2. Ignore ALL trained model binaries (CNN, FNN, RNN, GAN, Autoencoders)
 models/
 *.pth
 *.h5
+*.pkl
 
 # --- OS Specific ---
 .DS_Store
